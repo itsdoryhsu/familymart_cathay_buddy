@@ -52,6 +52,7 @@ tailwind.config = {
           <a href="#participation-steps" class="transition-colors hover:opacity-70" style="color: #0f231c;">參加方式</a>
           <a href="#prizes-section" class="transition-colors hover:opacity-70" style="color: #0f231c;">獎品清單</a>
           <a href="#schedule-section" class="transition-colors hover:opacity-70" style="color: #0f231c;">活動時程</a>
+          <a href="#winners-section" class="transition-colors hover:opacity-70" style="color: #0f231c;">抽獎公告</a>
           <a href="#rules-section" class="transition-colors hover:opacity-70" style="color: #0f231c;">活動規範</a>
         </div>
       </nav>
@@ -186,6 +187,78 @@ tailwind.config = {
             <div>
               <h3 class="text-xl font-semibold mb-2 text-bg-dark dark:text-bg-light">主辦單位</h3>
               <p class="text-bg-dark/80 dark:text-bg-light/80">國泰健康管理顧問股份有限公司</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 抽獎結果公告區塊 -->
+      <section class="mb-16" aria-labelledby="winners-section">
+        <div class="max-w-3xl mx-auto">
+          <h2 id="winners-section" class="text-3xl font-bold text-center mb-8 text-text">🎊 抽獎結果公告</h2>
+
+          <div class="bg-gray-100/80 rounded-lg p-6 sm:p-8" role="region" aria-label="抽獎結果資訊">
+
+            <!-- 公告前預告狀態 -->
+            <div id="announcement-preview" class="text-center">
+              <div class="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
+                <span class="text-2xl">⏰</span>
+              </div>
+              <h3 class="text-xl font-semibold mb-3 text-text">中獎名單即將公佈</h3>
+              <p class="text-text/80 mb-4">
+                得獎公佈時間：<strong class="font-bold text-primary">
+                  <time datetime="2025-11-30">114年11月30日</time>
+                </strong>
+              </p>
+              <p class="text-sm text-text/60">
+                屆時將在此頁面公佈所有中獎者名單，請密切關注！
+              </p>
+            </div>
+
+            <!-- 公告後實際名單 (11/30後顯示) -->
+            <div id="winners-list" class="hidden">
+
+              <!-- 週獎品中獎者 -->
+              <div class="mb-8 border-b border-gray-200 pb-6">
+                <h3 class="text-xl font-semibold mb-4 text-text flex items-center">
+                  <span class="text-2xl mr-2">🏆</span>
+                  TANITA體組成計中獎者 (每週1名)
+                </h3>
+
+                <div class="grid sm:grid-cols-2 gap-4">
+                  <div class="bg-white/70 rounded-lg p-4">
+                    <h4 class="font-semibold text-primary mb-2">第一週 (10/20-10/26)</h4>
+                    <p class="text-text/80">將於11/30公佈</p>
+                  </div>
+                  <div class="bg-white/70 rounded-lg p-4">
+                    <h4 class="font-semibold text-primary mb-2">第二週 (10/27-11/02)</h4>
+                    <p class="text-text/80">將於11/30公佈</p>
+                  </div>
+                  <div class="bg-white/70 rounded-lg p-4">
+                    <h4 class="font-semibold text-primary mb-2">第三週 (11/03-11/09)</h4>
+                    <p class="text-text/80">將於11/30公佈</p>
+                  </div>
+                  <div class="bg-white/70 rounded-lg p-4">
+                    <h4 class="font-semibold text-primary mb-2">第四週 (11/10-11/16)</h4>
+                    <p class="text-text/80">將於11/30公佈</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 日獎品中獎者 -->
+              <div>
+                <h3 class="text-xl font-semibold mb-4 text-text flex items-center">
+                  <span class="text-2xl mr-2">💰</span>
+                  $100禮券中獎者 (每日3名)
+                </h3>
+
+                <div class="bg-white/70 rounded-lg p-4">
+                  <p class="text-text/80 text-center">
+                    完整中獎名單將於 <strong class="text-primary">114年11月30日</strong> 在此頁面公佈
+                  </p>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
@@ -433,4 +506,28 @@ tailwind.config = {
       </footer>
     </main>
   </div>
+
+  <script>
+    // 抽獎結果顯示邏輯
+    function checkAnnouncementDate() {
+      const announcementDate = new Date('2025-11-30T00:00:00+08:00');
+      const currentDate = new Date();
+
+      const previewElement = document.getElementById('announcement-preview');
+      const winnersListElement = document.getElementById('winners-list');
+
+      if (currentDate >= announcementDate) {
+        // 11/30 後顯示中獎名單
+        previewElement.classList.add('hidden');
+        winnersListElement.classList.remove('hidden');
+      } else {
+        // 11/30 前顯示預告
+        previewElement.classList.remove('hidden');
+        winnersListElement.classList.add('hidden');
+      }
+    }
+
+    // 頁面載入時檢查
+    document.addEventListener('DOMContentLoaded', checkAnnouncementDate);
+  </script>
 </body></html>

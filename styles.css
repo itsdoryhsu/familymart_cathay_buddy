@@ -3,8 +3,8 @@
 
 :root {
   --color-primary: #019863;
-  --color-bg-light: #f0f9f5;
-  --color-bg-dark: #0f231c;
+  --color-bg: #f0f9f5;
+  --color-text: #0f231c;
   --font-display: 'Plus Jakarta Sans', sans-serif;
 }
 
@@ -22,20 +22,12 @@ body {
   background-color: var(--color-primary);
 }
 
-.bg-bg-light {
-  background-color: var(--color-bg-light);
+.bg-light {
+  background-color: var(--color-bg);
 }
 
-.bg-bg-dark {
-  background-color: var(--color-bg-dark);
-}
-
-.text-bg-dark {
-  color: var(--color-bg-dark);
-}
-
-.text-bg-light {
-  color: var(--color-bg-light);
+.text-dark {
+  color: var(--color-text);
 }
 
 .font-display {
@@ -72,13 +64,6 @@ body {
   }
 }
 
-/* 深色模式支援增強 */
-@media (prefers-color-scheme: dark) {
-  .auto-dark-mode {
-    background-color: var(--color-bg-dark);
-    color: var(--color-bg-light);
-  }
-}
 
 /* 可訪問性增強 */
 .cta-button:focus {
@@ -86,9 +71,24 @@ body {
   outline-offset: 2px;
 }
 
-/* 動畫性能優化 */
-.cta-button {
+/* CTA 按鈕樣式強化 - 防止文字折行 */
+.cta-button,
+a[role="button"] {
   will-change: transform;
+  white-space: nowrap;
+  display: inline-block;
+  text-align: center;
+  min-width: fit-content;
+}
+
+/* 手機版 CTA 按鈕調整 */
+@media (max-width: 640px) {
+  .cta-button,
+  a[role="button"] {
+    font-size: 1rem !important;
+    padding: 0.75rem 1.5rem !important;
+    white-space: nowrap;
+  }
 }
 
 /* FAQ收合組件樣式 */
@@ -117,7 +117,7 @@ body {
   cursor: pointer;
   background: rgba(249, 250, 251, 0.5);
   font-weight: 600;
-  color: var(--color-bg-dark);
+  color: var(--color-text);
   list-style: none;
   outline: none;
   transition: background-color 0.2s ease;
@@ -166,24 +166,22 @@ body {
   }
 }
 
-/* 深色模式支援 */
-@media (prefers-color-scheme: dark) {
-  .faq-summary {
-    background: rgba(15, 23, 42, 0.5);
-    color: var(--color-bg-light);
-  }
 
-  .faq-summary:hover {
-    background: rgba(1, 152, 99, 0.1);
-  }
+/* 抽獎公告區塊樣式 */
+.winners-announcement {
+  background: linear-gradient(135deg, rgba(1, 152, 99, 0.05) 0%, rgba(240, 249, 245, 0.8) 100%);
+  border: 1px solid rgba(1, 152, 99, 0.1);
+}
 
-  .faq-content {
-    color: rgba(203, 213, 225, 0.8);
-  }
+.winner-card {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(1, 152, 99, 0.1);
+}
 
-  .faq-item {
-    border-color: rgba(71, 85, 105, 0.6);
-  }
+.winner-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(1, 152, 99, 0.1);
+  border-color: var(--color-primary);
 }
 
 /* 列印樣式優化 */
