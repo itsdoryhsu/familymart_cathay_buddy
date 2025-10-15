@@ -1,0 +1,197 @@
+/* 🍽️ My Food Diary - 專業前端重構樣式表 */
+/* 混合架構：保持Tailwind優勢 + 純CSS組件補強 */
+
+:root {
+  --color-primary: #019863;
+  --color-bg-light: #f0f9f5;
+  --color-bg-dark: #0f231c;
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* 基礎重置與字型 */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-display);
+}
+
+/* 基礎樣式類別 */
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-bg-light {
+  background-color: var(--color-bg-light);
+}
+
+.bg-bg-dark {
+  background-color: var(--color-bg-dark);
+}
+
+.text-bg-dark {
+  color: var(--color-bg-dark);
+}
+
+.text-bg-light {
+  color: var(--color-bg-light);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* 獎品圖片背景 - 純CSS實現，提升維護性 */
+.prize-image-tanita {
+  background-image: url('assets/圖片 1.png');
+}
+
+.prize-image-voucher {
+  background-image: url('assets/圖片 2.png');
+}
+
+/* 響應式圖片優化 */
+@media (max-width: 768px) {
+  .prize-image-tanita,
+  .prize-image-voucher {
+    min-height: 200px;
+  }
+}
+
+/* 深色模式支援增強 */
+@media (prefers-color-scheme: dark) {
+  .auto-dark-mode {
+    background-color: var(--color-bg-dark);
+    color: var(--color-bg-light);
+  }
+}
+
+/* 可訪問性增強 */
+.cta-button:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* 動畫性能優化 */
+.cta-button {
+  will-change: transform;
+}
+
+/* FAQ收合組件樣式 */
+.faq-container {
+  max-width: 100%;
+}
+
+.faq-item {
+  border: 1px solid rgba(203, 213, 225, 0.6);
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 2px 8px rgba(1, 152, 99, 0.1);
+}
+
+.faq-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  background: rgba(249, 250, 251, 0.5);
+  font-weight: 600;
+  color: var(--color-bg-dark);
+  list-style: none;
+  outline: none;
+  transition: background-color 0.2s ease;
+}
+
+.faq-summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-summary:hover {
+  background: rgba(1, 152, 99, 0.05);
+}
+
+.faq-summary:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: -2px;
+}
+
+.expand-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  transition: transform 0.3s ease;
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+.faq-item[open] .expand-icon {
+  transform: rotate(180deg);
+}
+
+.faq-content {
+  padding: 0 1.25rem 1.25rem;
+  color: rgba(51, 65, 85, 0.8);
+  line-height: 1.6;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 深色模式支援 */
+@media (prefers-color-scheme: dark) {
+  .faq-summary {
+    background: rgba(15, 23, 42, 0.5);
+    color: var(--color-bg-light);
+  }
+
+  .faq-summary:hover {
+    background: rgba(1, 152, 99, 0.1);
+  }
+
+  .faq-content {
+    color: rgba(203, 213, 225, 0.8);
+  }
+
+  .faq-item {
+    border-color: rgba(71, 85, 105, 0.6);
+  }
+}
+
+/* 列印樣式優化 */
+@media print {
+  .cta-button {
+    background-color: transparent !important;
+    color: var(--color-primary) !important;
+    border: 2px solid var(--color-primary);
+  }
+
+
+  .faq-item {
+    border: 1px solid #ccc;
+    break-inside: avoid;
+  }
+
+  .faq-item[open] .faq-content {
+    display: block;
+  }
+
+  .expand-icon {
+    display: none;
+  }
+}

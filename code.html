@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🍽️ 我的飲食日記 - 拍照抽大獎</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="stylesheet" href="styles.css">
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        primary: "#019863",
+        "bg-light": "#f5f8f7",
+        "bg-dark": "#0f231c"
+      },
+      fontFamily: {
+        display: ["Plus Jakarta Sans", "sans-serif"]
+      }
+    }
+  }
+};
+</script>
+</head>
+<body class="bg-bg-light dark:bg-bg-dark font-display">
+  <!-- 主要容器 -->
+  <div class="w-full min-h-screen overflow-x-hidden">
+    <!-- 頁面主體區域 -->
+    <main class="mx-auto px-4 sm:px-6 lg:px-8 py-12" style="max-width: 985px;" role="main" aria-label="飲食日記活動頁面">
+
+      <!-- 導航區塊：公司logo -->
+      <nav class="flex items-center justify-between mb-8" role="navigation" aria-label="網站導航">
+        <a href="https://www.cathayhealth.com.tw/"
+           class="flex items-center space-x-3 hover:opacity-80 transition-opacity"
+           aria-label="國泰健康管理官方網站">
+          <!-- 公司Logo區域 -->
+          <div class="h-12 flex items-center">
+            <img src="assets/國泰健康管理_橫式logo-無英文.png"
+                 alt="國泰健康管理企業標誌"
+                 class="h-10 w-auto object-contain"
+                 loading="lazy">
+          </div>
+        </a>
+
+        <!-- 錨點導航選項 -->
+        <div class="hidden md:flex space-x-6">
+          <a href="#participation-steps" class="transition-colors hover:opacity-70" style="color: #0f231c;">參加方式</a>
+          <a href="#prizes-section" class="transition-colors hover:opacity-70" style="color: #0f231c;">獎品清單</a>
+          <a href="#schedule-section" class="transition-colors hover:opacity-70" style="color: #0f231c;">活動時程</a>
+          <a href="#rules-section" class="transition-colors hover:opacity-70" style="color: #0f231c;">活動規範</a>
+        </div>
+      </nav>
+
+      <!-- Hero區塊：主視覺與CTA -->
+      <header class="relative rounded-xl overflow-hidden mb-16" role="banner">
+        <div class="absolute inset-0 bg-cover bg-center" style='background-image: url("assets/Gemini_Generated_Image_zfr7v0zfr7v0zfr7.png");' aria-hidden="true"></div>
+        <div class="relative z-10 flex flex-col items-center justify-center min-h-[480px] p-8 text-center bg-black bg-opacity-30">
+          <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4">
+            🍽️ 我的飲食日記
+          </h1>
+          <p class="text-lg md:text-2xl font-semibold text-white mb-8">
+            拍下餐桌美味，天天抽 $100 元，還有價值 $7,000 健康好禮週週送！
+          </p>
+          <a class="inline-block bg-primary text-white font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:bg-opacity-90 transition-transform transform hover:scale-105"
+             href="#"
+             role="button"
+             aria-label="立即加入LINE官方帳號參加抽獎活動">
+            ✨ 立即加入 LINE 抽大獎！✨
+          </a>
+        </div>
+      </header>
+      <!-- 參與步驟區塊 -->
+      <section class="mb-16" aria-labelledby="participation-steps">
+        <h2 id="participation-steps" class="text-3xl font-bold text-center mb-10 text-bg-dark dark:text-bg-light">📝 30 秒輕鬆參加！</h2>
+
+        <!-- 步驟流程圖片 -->
+        <div role="region" aria-label="參加步驟流程" class="overflow-hidden">
+          <div class="grid md:grid-cols-3 gap-4 items-start max-w-4xl mx-auto">
+            <div class="flex justify-center">
+              <img src="assets/活動步驟1.png"
+                   alt="活動參加步驟一"
+                   class="w-full h-auto object-contain"
+                   style="transform: scale(0.9);"
+                   loading="lazy">
+            </div>
+            <div class="flex justify-center">
+              <img src="assets/活動步驟2.png"
+                   alt="活動參加步驟二"
+                   class="w-full h-auto object-contain"
+                   style="transform: scale(0.9);"
+                   loading="lazy">
+            </div>
+            <div class="flex justify-center">
+              <img src="assets/活動步驟3.png"
+                   alt="活動參加步驟三"
+                   class="w-full h-auto object-contain"
+                   style="transform: scale(0.9);"
+                   loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <!-- 活動重點資訊 -->
+        <div class="text-center mt-10" role="complementary" aria-label="活動重點資訊">
+          <p class="text-primary font-semibold mb-2">每日最多可上傳 3 張，每張都是獨立抽獎機會！</p>
+          <p class="text-sm text-bg-dark/60 dark:text-bg-light/60">
+            <time datetime="2025-10-20T11:00">活動期間：114/10/20 11:00</time> ~
+            <time datetime="2025-11-14T23:59">114/11/14 23:59</time>
+          </p>
+        </div>
+      </section>
+      <!-- 獎品展示區塊 -->
+      <section class="mb-16" aria-labelledby="prizes-section">
+        <h2 id="prizes-section" class="text-3xl font-bold text-center mb-10 text-bg-dark dark:text-bg-light">🎁 獎品清單：越吃越健康，越拍越幸運!</h2>
+
+        <div class="grid md:grid-cols-2 gap-8" role="region" aria-label="獎品展示">
+          <!-- 週獎品 -->
+          <article class="bg-white/50 dark:bg-black/20 rounded-lg shadow-md overflow-hidden flex flex-col md:flex-row items-center"
+                   aria-labelledby="weekly-prize">
+            <div class="md:w-2/5 h-48 md:h-full bg-contain bg-center bg-no-repeat prize-image-tanita"
+                 role="img" aria-label="TANITA體組成計產品圖片"></div>
+            <div class="p-6 md:w-3/5">
+              <h3 id="weekly-prize" class="text-xl font-bold text-primary mb-2">🏆 Weekly Grand Prize</h3>
+              <p class="text-lg font-semibold text-bg-dark dark:text-bg-light mb-2">TANITA 11合1 藍牙智能體組成計 RD-953</p>
+              <p class="text-sm text-bg-dark/80 dark:text-bg-light/80">價值 $7,000，每週 1 名</p>
+            </div>
+          </article>
+
+          <!-- 日獎品 -->
+          <article class="bg-white/50 dark:bg-black/20 rounded-lg shadow-md overflow-hidden flex flex-col md:flex-row items-center"
+                   aria-labelledby="daily-prize">
+            <div class="md:w-2/5 h-48 md:h-full bg-contain bg-center bg-no-repeat prize-image-voucher"
+                 role="img" aria-label="便利商店電子禮券圖片"></div>
+            <div class="p-6 md:w-3/5">
+              <h3 id="daily-prize" class="text-xl font-bold text-primary mb-2">💰 Daily Small Fortune</h3>
+              <p class="text-lg font-semibold text-bg-dark dark:text-bg-light mb-2">便利商店電子禮券 $100</p>
+              <p class="text-sm text-bg-dark/80 dark:text-bg-light/80">價值 $100，每日 3 名</p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- 活動時程區塊 -->
+      <section class="mb-16" aria-labelledby="schedule-section">
+        <div class="max-w-3xl mx-auto">
+          <h2 id="schedule-section" class="text-3xl font-bold text-center mb-8 text-bg-dark dark:text-bg-light">🗓️ 活動時程與細則</h2>
+
+          <div class="bg-gray-100/80 dark:bg-black/20 rounded-lg p-6 sm:p-8" role="region" aria-label="活動時程資訊">
+            <!-- 重要時程 -->
+            <div class="mb-6 border-b border-blue-200/80 dark:border-blue-800/50 pb-6">
+              <h3 class="text-xl font-semibold mb-2 text-bg-dark dark:text-bg-light">重要時程</h3>
+              <ul class="list-disc list-inside text-bg-dark/80 dark:text-bg-light/80 space-y-1" role="list">
+                <li>活動期間: <strong class="font-bold text-primary">
+                  <time datetime="2025-10-20">114/10/20</time> - <time datetime="2025-11-16">11/16</time>
+                </strong></li>
+                <li>得獎公佈: <strong class="font-bold text-primary">
+                  <time datetime="2025-11-30">114/11/30</time>
+                </strong> (將於本活動頁公佈)</li>
+              </ul>
+            </div>
+
+            <!-- 活動週次安排 -->
+            <div class="mb-6 border-b border-blue-200/80 dark:border-blue-800/50 pb-6">
+              <h3 class="text-xl font-semibold mb-2 text-bg-dark dark:text-bg-light">活動週次安排</h3>
+              <ul class="list-disc list-inside text-bg-dark/80 dark:text-bg-light/80 space-y-1" role="list">
+                <li><strong class="font-bold text-primary">第一週</strong>:
+                  <time datetime="2025-10-20T11:00">114/10/20 11:00起</time> 至 <time datetime="2025-10-26T23:59">114/10/26 23:59</time>
+                </li>
+                <li><strong class="font-bold text-primary">第二週</strong>:
+                  <time datetime="2025-10-27T00:00">114/10/27 00:00起</time> 至 <time datetime="2025-11-02T23:59">114/11/02 23:59</time>
+                </li>
+                <li><strong class="font-bold text-primary">第三週</strong>:
+                  <time datetime="2025-11-03T00:00">114/11/03 00:00起</time> 至 <time datetime="2025-11-09T23:59">114/11/09 23:59</time>
+                </li>
+                <li><strong class="font-bold text-primary">第四週</strong>:
+                  <time datetime="2025-11-10T00:00">114/11/10 00:00起</time> 至 <time datetime="2025-11-16T23:59">114/11/16 23:59</time>
+                </li>
+              </ul>
+            </div>
+
+            <!-- 主辦單位 -->
+            <div>
+              <h3 class="text-xl font-semibold mb-2 text-bg-dark dark:text-bg-light">主辦單位</h3>
+              <p class="text-bg-dark/80 dark:text-bg-light/80">國泰健康管理顧問股份有限公司</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 活動規範與細則區塊 -->
+      <section class="mb-16" aria-labelledby="rules-section">
+        <div class="max-w-3xl mx-auto">
+          <h2 id="rules-section" class="text-3xl font-bold text-center mb-8 text-bg-dark dark:text-bg-light">📖 活動規範與細則</h2>
+
+          <div class="bg-gray-100/80 dark:bg-black/20 rounded-lg p-6 sm:p-8" role="region" aria-label="活動規範詳情">
+            <p class="text-center text-sm text-bg-dark/70 dark:text-bg-light/70 mb-8">凡參加者，即視為已充分瞭解並同意遵守本活動之各項規定辦法。</p>
+
+              <!-- FAQ收合式規則區塊 -->
+              <div class="faq-container" role="region" aria-label="常見問題與活動規則">
+
+                <!-- 參加資格相關 -->
+                <details class="faq-item" id="faq-eligibility" open>
+                  <summary class="faq-summary" role="button" aria-expanded="true" tabindex="0">
+                    <span>🧑‍🤝‍🧑 誰可以參加這個活動？</span>
+                    <span class="expand-icon" aria-hidden="true">▼</span>
+                  </summary>
+                  <div class="faq-content">
+                    <p><strong>參加條件：</strong></p>
+                    <ul class="list-disc pl-5 space-y-1 mt-2">
+                      <li>年滿18歲</li>
+                      <li>居住於台灣地區（含澎湖、金門、馬祖）</li>
+                      <li>必須加入「國泰健康管理」LINE官方帳號</li>
+                    </ul>
+                  </div>
+                </details>
+
+                <details class="faq-item" id="faq-photos">
+                  <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
+                    <span>📸 每天可以上傳幾張照片？</span>
+                    <span class="expand-icon" aria-hidden="true">▼</span>
+                  </summary>
+                  <div class="faq-content">
+                    <p><strong>上傳規則：</strong></p>
+                    <ul class="list-disc pl-5 space-y-1 mt-2">
+                      <li>每人每日最多可上傳<strong class="text-primary">3張</strong>不同餐點的照片</li>
+                      <li>每張照片可獲得<strong>1次抽獎機會</strong></li>
+                      <li>若每日上傳照片超過3次(含重複輸入)，第4次起上傳的照片，系統將不列入抽獎資格。</li>
+                      <li>需在活動期間內上傳符合規定的餐點照片</li>
+                    </ul>
+                  </div>
+                </details>
+
+                <!-- 中獎領獎相關 -->
+                <details class="faq-item" id="faq-announcement">
+                  <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
+                    <span>🎉 什麼時候公布得獎名單？</span>
+                    <span class="expand-icon" aria-hidden="true">▼</span>
+                  </summary>
+                  <div class="faq-content">
+                    <p><strong>得獎公布：</strong></p>
+                    <ul class="list-disc pl-5 space-y-1 mt-2">
+                      <li>所有獎項將於活動結束後，由電腦系統隨機抽出</li>
+                      <li>得獎名單將於 <strong class="text-primary"><time datetime="2025-11-30">114/11/30</time></strong> 公布於本活動頁面</li>
+                    </ul>
+                  </div>
+                </details>
+
+                <details class="faq-item" id="faq-notification">
+                  <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
+                    <span>📱 如何知道我中獎了？</span>
+                    <span class="expand-icon" aria-hidden="true">▼</span>
+                  </summary>
+                  <div class="faq-content">
+                    <p><strong>得獎通知：</strong></p>
+                    <ul class="list-disc pl-5 space-y-1 mt-2">
+                      <li>得獎者將透過「國泰健康管理」LINE官方帳號收到得獎通知</li>
+                      <li>請務必保持好友狀態並開啟通知</li>
+                      <li>得獎者須於指定期限內提供真實資料核對</li>
+                    </ul>
+                  </div>
+                </details>
+
+                <details class="faq-item" id="faq-prize-delivery">
+                  <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
+                    <span>📦 如何領取獎品？</span>
+                    <span class="expand-icon" aria-hidden="true">▼</span>
+                  </summary>
+                  <div class="faq-content">
+                    <p><strong>領獎流程：</strong></p>
+                    <ul class="list-disc pl-5 space-y-1 mt-2">
+                      <li>依據得獎通知訊息，提供真實姓名、聯絡電話、郵寄地址等資訊</li>
+                      <li>逾期或資料不實者，視同放棄領獎資格</li>
+                      <li>獎品寄送範圍僅限台灣地區</li>
+                      <li>獎品以實物為準，不得要求更換或折換現金</li>
+                    </ul>
+                  </div>
+                </details>
+
+                <!-- 照片使用權相關 -->
+                <details class="faq-item" id="faq-photo-rights">
+                  <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
+                    <span>📷 上傳的照片有什麼要求？</span>
+                    <span class="expand-icon" aria-hidden="true">▼</span>
+                  </summary>
+                  <div class="faq-content">
+                    <p><strong>照片要求：</strong></p>
+                    <ul class="list-disc pl-5 space-y-1 mt-2">
+                      <li>參加者保證上傳之照片均為<strong>本人原創</strong></li>
+                      <li>無侵害他人智慧財產權之情事</li>
+                      <li>若有任何侵權行為，由參加者自負法律責任，與主辦單位無涉</li>
+                    </ul>
+                  </div>
+                </details>
+
+                <details class="faq-item" id="faq-photo-usage">
+                  <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
+                    <span>🎯 照片會被如何使用？</span>
+                    <span class="expand-icon" aria-hidden="true">▼</span>
+                  </summary>
+                  <div class="faq-content">
+                    <p><strong>使用授權：</strong></p>
+                    <ul class="list-disc pl-5 space-y-1 mt-2">
+                      <li>參加者同意授權主辦單位（國泰健康管理顧問股份有限公司）使用上傳照片</li>
+                      <li>可用於本活動相關之宣傳、展示、報導等用途</li>
+                      <li>不另支付任何費用</li>
+                    </ul>
+                  </div>
+                </details>
+
+                <!-- 活動變更相關 -->
+                <details class="faq-item" id="faq-changes">
+                  <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
+                    <span>⚠️ 活動可能會取消或變更嗎？</span>
+                    <span class="expand-icon" aria-hidden="true">▼</span>
+                  </summary>
+                  <div class="faq-content">
+                    <p><strong>活動變更：</strong></p>
+                    <ul class="list-disc pl-5 space-y-1 mt-2">
+                      <li>本活動因故無法進行時，主辦單位有權決定取消、終止、修改或暫停本活動</li>
+                      <li>若有任何因電腦、網路、電話、技術或不可歸責於主辦單位之事由，而使參加者所寄出或登錄之資料有延遲、遺失、錯誤、無法辨識或毀損之情況，主辦單位不負任何法律責任</li>
+                    </ul>
+                  </div>
+                </details>
+
+                <!-- 法律相關 -->
+                <details class="faq-item" id="faq-legal">
+                  <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
+                    <span>⚖️ 如果有爭議怎麼處理？</span>
+                    <span class="expand-icon" aria-hidden="true">▼</span>
+                  </summary>
+                  <div class="faq-content">
+                    <p><strong>法律管轄：</strong></p>
+                    <ul class="list-disc pl-5 space-y-1 mt-2">
+                      <li>本活動未盡事宜，依中華民國相關法令辦理</li>
+                      <li>若因本活動發生任何爭議，以台灣台北地方法院為第一審管轄法院</li>
+                    </ul>
+                  </div>
+                </details>
+
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 行動呼籲區塊 -->
+      <footer class="text-center mb-16" role="contentinfo">
+        <a class="inline-block bg-primary text-white font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:bg-opacity-90 transition-transform transform hover:scale-105"
+           href="#"
+           role="button"
+           aria-label="開始上傳美食照片參加活動">
+          點我上傳美食照，開始記錄!
+        </a>
+      </footer>
+    </main>
+  </div>
+</body></html>
