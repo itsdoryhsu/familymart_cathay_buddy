@@ -41,6 +41,7 @@ body {
   background-repeat: no-repeat !important;
   background-position: center !important;
   min-height: 200px !important;
+  margin-left: 10px !important;
 }
 
 .prize-image-voucher {
@@ -49,6 +50,7 @@ body {
   background-repeat: no-repeat !important;
   background-position: center !important;
   min-height: 200px !important;
+  margin-left: 10px !important;
 }
 
 /* 響應式圖片優化 - 手機版強制設定 */
@@ -61,6 +63,7 @@ body {
     background-position: center !important;
     width: 100% !important;
     display: block !important;
+    margin-left: 10px !important;
   }
 }
 
