@@ -183,12 +183,7 @@ body {
 
 
   .faq-item {
-    border: 1px solid #ccc;
     break-inside: avoid;
-  }
-
-  .faq-item[open] .faq-content {
-    display: block;
   }
 
   .expand-icon {
