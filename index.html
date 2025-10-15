@@ -11,13 +11,11 @@
 <link rel="stylesheet" href="styles.css">
 <script>
 tailwind.config = {
-  darkMode: "class",
   theme: {
     extend: {
       colors: {
         primary: "#019863",
-        "bg-light": "#f5f8f7",
-        "bg-dark": "#0f231c"
+        "bg-light": "#f5f8f7"
       },
       fontFamily: {
         display: ["Plus Jakarta Sans", "sans-serif"]
@@ -27,7 +25,7 @@ tailwind.config = {
 };
 </script>
 </head>
-<body class="bg-bg-light dark:bg-bg-dark font-display">
+<body class="bg-bg-light font-display">
   <!-- 主要容器 -->
   <div class="w-full min-h-screen overflow-x-hidden">
     <!-- 頁面主體區域 -->
@@ -77,7 +75,7 @@ tailwind.config = {
       </header>
       <!-- 參與步驟區塊 -->
       <section class="mb-16" aria-labelledby="participation-steps">
-        <h2 id="participation-steps" class="text-3xl font-bold text-center mb-10 text-bg-dark dark:text-bg-light">📝 30 秒輕鬆參加！</h2>
+        <h2 id="participation-steps" class="text-3xl font-bold text-center mb-10 text-bg-dark">📝 30 秒輕鬆參加！</h2>
 
         <!-- 步驟流程圖片 -->
         <div role="region" aria-label="參加步驟流程" class="overflow-hidden">
@@ -109,7 +107,7 @@ tailwind.config = {
         <!-- 活動重點資訊 -->
         <div class="text-center mt-10" role="complementary" aria-label="活動重點資訊">
           <p class="text-primary font-semibold mb-2">每日最多可上傳 3 張，每張都是獨立抽獎機會！</p>
-          <p class="text-sm text-bg-dark/60 dark:text-bg-light/60">
+          <p class="text-sm text-bg-dark/60">
             <time datetime="2025-10-20T11:00">活動期間：114/10/20 11:00</time> ~
             <time datetime="2025-11-14T23:59">114/11/16 23:59</time>
           </p>
@@ -117,30 +115,30 @@ tailwind.config = {
       </section>
       <!-- 獎品展示區塊 -->
       <section class="mb-16" aria-labelledby="prizes-section">
-        <h2 id="prizes-section" class="text-3xl font-bold text-center mb-10 text-bg-dark dark:text-bg-light">🎁 獎品清單：越吃越健康，越拍越幸運!</h2>
+        <h2 id="prizes-section" class="text-3xl font-bold text-center mb-10 text-bg-dark">🎁 獎品清單：越吃越健康，越拍越幸運!</h2>
 
         <div class="grid md:grid-cols-2 gap-8" role="region" aria-label="獎品展示">
           <!-- 週獎品 -->
-          <article class="bg-white/50 dark:bg-black/20 rounded-lg shadow-md overflow-hidden flex flex-col md:flex-row items-center"
+          <article class="bg-white/50 rounded-lg shadow-md overflow-hidden flex flex-col md:flex-row items-center"
                    aria-labelledby="weekly-prize">
             <div class="md:w-2/5 h-64 md:h-full prize-image-tanita"
                  role="img" aria-label="TANITA體組成計產品圖片"></div>
             <div class="p-6 md:w-3/5">
               <h3 id="weekly-prize" class="text-xl font-bold text-primary mb-2">🏆 週週抽</h3>
-              <p class="text-lg font-semibold text-bg-dark dark:text-bg-light mb-2">TANITA 11合1 藍牙智能體組成計 RD-953</p>
-              <p class="text-sm text-bg-dark/80 dark:text-bg-light/80">價值 $7,000，每週 1 名</p>
+              <p class="text-lg font-semibold text-bg-dark mb-2">TANITA 11合1 藍牙智能體組成計 RD-953</p>
+              <p class="text-sm text-bg-dark/80">價值 $7,000，每週 1 名</p>
             </div>
           </article>
 
           <!-- 日獎品 -->
-          <article class="bg-white/50 dark:bg-black/20 rounded-lg shadow-md overflow-hidden flex flex-col md:flex-row items-center"
+          <article class="bg-white/50 rounded-lg shadow-md overflow-hidden flex flex-col md:flex-row items-center"
                    aria-labelledby="daily-prize">
             <div class="md:w-2/5 h-64 md:h-full prize-image-voucher"
                  role="img" aria-label="便利商店電子禮券圖片"></div>
             <div class="p-6 md:w-3/5">
               <h3 id="daily-prize" class="text-xl font-bold text-primary mb-2">💰 天天週</h3>
-              <p class="text-lg font-semibold text-bg-dark dark:text-bg-light mb-2">便利超商電子禮券 $100</p>
-              <p class="text-sm text-bg-dark/80 dark:text-bg-light/80">價值 $100，每日 3 名</p>
+              <p class="text-lg font-semibold text-bg-dark mb-2">便利超商電子禮券 $100</p>
+              <p class="text-sm text-bg-dark/80">價值 $100，每日 3 名</p>
             </div>
           </article>
         </div>
@@ -148,13 +146,13 @@ tailwind.config = {
       <!-- 活動時程區塊 -->
       <section class="mb-16" aria-labelledby="schedule-section">
         <div class="max-w-3xl mx-auto">
-          <h2 id="schedule-section" class="text-3xl font-bold text-center mb-8 text-bg-dark dark:text-bg-light">🗓️ 活動時程與細則</h2>
+          <h2 id="schedule-section" class="text-3xl font-bold text-center mb-8 text-bg-dark">🗓️ 活動時程與細則</h2>
 
-          <div class="bg-gray-100/80 dark:bg-black/20 rounded-lg p-6 sm:p-8" role="region" aria-label="活動時程資訊">
+          <div class="bg-gray-100/80 rounded-lg p-6 sm:p-8" role="region" aria-label="活動時程資訊">
             <!-- 重要時程 -->
-            <div class="mb-6 border-b border-blue-200/80 dark:border-blue-800/50 pb-6">
-              <h3 class="text-xl font-semibold mb-2 text-bg-dark dark:text-bg-light">重要時程</h3>
-              <ul class="list-disc list-inside text-bg-dark/80 dark:text-bg-light/80 space-y-1" role="list">
+            <div class="mb-6 border-b border-blue-200/80 pb-6">
+              <h3 class="text-xl font-semibold mb-2 text-bg-dark">重要時程</h3>
+              <ul class="list-disc list-inside text-bg-dark/80 space-y-1" role="list">
                 <li>活動期間: <strong class="font-bold text-primary">
                   <time datetime="2025-10-20">114/10/20</time> - <time datetime="2025-11-16">11/16</time>
                 </strong></li>
@@ -165,9 +163,9 @@ tailwind.config = {
             </div>
 
             <!-- 活動週次安排 -->
-            <div class="mb-6 border-b border-blue-200/80 dark:border-blue-800/50 pb-6">
-              <h3 class="text-xl font-semibold mb-2 text-bg-dark dark:text-bg-light">活動週次安排</h3>
-              <ul class="list-disc list-inside text-bg-dark/80 dark:text-bg-light/80 space-y-1" role="list">
+            <div class="mb-6 border-b border-blue-200/80 pb-6">
+              <h3 class="text-xl font-semibold mb-2 text-bg-dark">活動週次安排</h3>
+              <ul class="list-disc list-inside text-bg-dark/80 space-y-1" role="list">
                 <li><strong class="font-bold text-primary">第一週</strong>:
                   <time datetime="2025-10-20T11:00">114/10/20 11:00</time> - <time datetime="2025-10-26T23:59">114/10/26 23:59</time>
                 </li>
@@ -185,8 +183,8 @@ tailwind.config = {
 
             <!-- 主辦單位 -->
             <div>
-              <h3 class="text-xl font-semibold mb-2 text-bg-dark dark:text-bg-light">主辦單位</h3>
-              <p class="text-bg-dark/80 dark:text-bg-light/80">國泰健康管理顧問股份有限公司</p>
+              <h3 class="text-xl font-semibold mb-2 text-bg-dark">主辦單位</h3>
+              <p class="text-bg-dark/80">國泰健康管理顧問股份有限公司</p>
             </div>
           </div>
         </div>
@@ -267,16 +265,16 @@ tailwind.config = {
       <!-- 活動規範與細則區塊 -->
       <section class="mb-16" aria-labelledby="rules-section">
         <div class="max-w-3xl mx-auto">
-          <h2 id="rules-section" class="text-3xl font-bold text-center mb-8 text-bg-dark dark:text-bg-light">📖 活動規範與細則</h2>
+          <h2 id="rules-section" class="text-3xl font-bold text-center mb-8 text-bg-dark">📖 活動規範與細則</h2>
 
-          <div class="bg-gray-100/80 dark:bg-black/20 rounded-lg p-6 sm:p-8" role="region" aria-label="活動規範詳情">
-            <p class="text-center text-sm text-bg-dark/70 dark:text-bg-light/70 mb-8">凡參加者，即視為已充分瞭解並同意遵守本活動之各項規定辦法。</p>
+          <div class="bg-gray-100/80 rounded-lg p-6 sm:p-8" role="region" aria-label="活動規範詳情">
+            <p class="text-center text-sm text-bg-dark/70 mb-8">凡參加者，即視為已充分瞭解並同意遵守本活動之各項規定辦法。</p>
 
               <!-- FAQ收合式規則區塊 -->
               <div class="faq-container" role="region" aria-label="常見問題與活動規則">
 
                 <!-- 一、活動辦法與主辦單位權利相關 -->
-                <h3 class="text-lg font-medium text-gray-700 dark:text-bg-light mb-4 mt-6">🧾 活動辦法與主辦單位權利相關</h3>
+                <h3 class="text-lg font-medium text-gray-700 mb-4 mt-6">🧾 活動辦法與主辦單位權利相關</h3>
 
                 <details class="faq-item" id="faq-q1" open>
                   <summary class="faq-summary" role="button" aria-expanded="true" tabindex="0">
@@ -349,7 +347,7 @@ tailwind.config = {
                 </details>
 
                 <!-- 二、參加資格與行為規範 -->
-                <h3 class="text-lg font-medium text-gray-700 dark:text-bg-light mb-4 mt-6">👤 參加資格與行為規範</h3>
+                <h3 class="text-lg font-medium text-gray-700 mb-4 mt-6">👤 參加資格與行為規範</h3>
 
                 <details class="faq-item" id="faq-q8">
                   <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
@@ -392,7 +390,7 @@ tailwind.config = {
                 </details>
 
                 <!-- 三、獎項、寄送與兌換相關 -->
-                <h3 class="text-lg font-medium text-gray-700 dark:text-bg-light mb-4 mt-6">🎁 獎項、寄送與兌換相關</h3>
+                <h3 class="text-lg font-medium text-gray-700 mb-4 mt-6">🎁 獎項、寄送與兌換相關</h3>
 
                 <details class="faq-item" id="faq-q12">
                   <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
@@ -445,7 +443,7 @@ tailwind.config = {
                 </details>
 
                 <!-- 四、稅務與資料填寫 -->
-                <h3 class="text-lg font-medium text-gray-700 dark:text-bg-light mb-4 mt-6">💰 稅務與資料填寫</h3>
+                <h3 class="text-lg font-medium text-gray-700 mb-4 mt-6">💰 稅務與資料填寫</h3>
 
                 <details class="faq-item" id="faq-q17">
                   <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
@@ -468,7 +466,7 @@ tailwind.config = {
                 </details>
 
                 <!-- 五、未成年人與個資保護 -->
-                <h3 class="text-lg font-medium text-gray-700 dark:text-bg-light mb-4 mt-6">🧒 未成年人與個資保護</h3>
+                <h3 class="text-lg font-medium text-gray-700 mb-4 mt-6">🧒 未成年人與個資保護</h3>
 
                 <details class="faq-item" id="faq-q19">
                   <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
