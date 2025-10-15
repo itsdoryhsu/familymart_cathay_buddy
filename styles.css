@@ -44,18 +44,31 @@ body {
 
 /* 獎品圖片背景 - 純CSS實現，提升維護性 */
 .prize-image-tanita {
-  background-image: url('assets/圖片 1.png');
+  background-image: url('assets/tanita-product.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 200px;
 }
 
 .prize-image-voucher {
-  background-image: url('assets/圖片 2.png');
+  background-image: url('assets/voucher-product.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 200px;
 }
 
-/* 響應式圖片優化 */
+/* 響應式圖片優化 - 手機版強制設定 */
 @media (max-width: 768px) {
   .prize-image-tanita,
   .prize-image-voucher {
-    min-height: 200px;
+    min-height: 250px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    width: 100% !important;
+    display: block !important;
   }
 }
 
