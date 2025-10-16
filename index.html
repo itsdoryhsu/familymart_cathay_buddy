@@ -85,12 +85,12 @@ tailwind.config = {
             <div class="text-center">
               <h3 class="font-bold text-primary text-xl mb-2">步驟一</h3>
               <p class="text-text mb-6 leading-relaxed">
-                拍下您的每餐餐點照片，紀錄日常飲食。
+                拍下您的餐點照片，紀錄日常飲食。
               </p>
-              <div class="flex justify-center overflow-hidden max-w-sm mx-auto rounded-xl">
+              <div class="flex justify-center overflow-hidden max-w-sm mx-auto rounded-xl h-64">
                 <img src="assets/step2.png?v=20251015"
                      alt="步驟一：拍下餐點照片"
-                     class="w-full h-auto object-contain"
+                     class="w-full h-full object-cover"
                      style="transform: scale(1.5);"
                      loading="lazy">
               </div>
@@ -102,11 +102,11 @@ tailwind.config = {
               <p class="text-text mb-6 leading-relaxed">
                 上傳餐點照片至LINE聊天室，即獲得抽獎資格！
               </p>
-              <div class="flex justify-center overflow-hidden max-w-sm mx-auto rounded-xl">
+              <div class="flex justify-center overflow-hidden max-w-sm mx-auto rounded-xl h-64">
                 <img src="assets/step3.png?v=20251015"
                      alt="步驟二：上傳照片抽獎"
-                     class="w-full h-auto object-contain"
-                     style="transform: scale(1.5);"
+                     class="w-full h-full object-cover"
+                     style="transform: scale(1.2);"
                      loading="lazy">
               </div>
             </div>
@@ -163,10 +163,10 @@ tailwind.config = {
             <div class="mb-6 border-b border-blue-200/80 pb-6">
               <h3 class="text-xl font-semibold mb-2 text-bg-dark">重要時程</h3>
               <ul class="list-disc list-inside text-bg-dark/80 space-y-1" role="list">
-                <li>活動期間: <strong class="font-bold text-primary">
-                  <time datetime="2025-10-20">114/10/20</time> - <time datetime="2025-11-16">11/16</time>
+                <li>活動期間: <strong class="font-bold text-primary font-mono">
+                  <time datetime="2025-10-20">114/10/20</time> - <time datetime="2025-11-16">114/11/16</time>
                 </strong></li>
-                <li>得獎公佈: <strong class="font-bold text-primary">
+                <li>得獎公佈: <strong class="font-bold text-primary font-mono">
                   <time datetime="2025-11-30">114/11/30</time>
                 </strong> (將於本活動頁公佈)</li>
               </ul>
@@ -174,21 +174,41 @@ tailwind.config = {
 
             <!-- 活動週次安排 -->
             <div class="mb-6 border-b border-blue-200/80 pb-6">
-              <h3 class="text-xl font-semibold mb-2 text-bg-dark">活動週次安排</h3>
-              <ul class="list-disc list-inside text-bg-dark/80 space-y-1" role="list">
-                <li><strong class="font-bold text-primary">第一週</strong>:
-                  <time datetime="2025-10-20T11:00">114/10/20 11:00</time> - <time datetime="2025-10-26T23:59">114/10/26 23:59</time>
-                </li>
-                <li><strong class="font-bold text-primary">第二週</strong>:
-                  <time datetime="2025-10-27T00:00">114/10/27 00:00</time> - <time datetime="2025-11-02T23:59">114/11/02 23:59</time>
-                </li>
-                <li><strong class="font-bold text-primary">第三週</strong>:
-                  <time datetime="2025-11-03T00:00">114/11/03 00:00</time> - <time datetime="2025-11-09T23:59">114/11/09 23:59</time>
-                </li>
-                <li><strong class="font-bold text-primary">第四週</strong>:
-                  <time datetime="2025-11-10T00:00">114/11/10 00:00</time> - <time datetime="2025-11-16T23:59">114/11/16 23:59</time>
-                </li>
-              </ul>
+              <h3 class="text-xl font-semibold mb-4 text-bg-dark">活動週次安排</h3>
+              <div class="space-y-3" role="list">
+                <div class="flex items-start text-bg-dark/80">
+                  <div class="w-14 flex-shrink-0 mr-4">
+                    <strong class="font-bold text-primary">第一週</strong>
+                  </div>
+                  <div class="font-mono">
+                    <time datetime="2025-10-20T11:00">114/10/20 11:00</time> - <time datetime="2025-10-26T23:59">114/10/26 23:59</time>
+                  </div>
+                </div>
+                <div class="flex items-start text-bg-dark/80">
+                  <div class="w-14 flex-shrink-0 mr-4">
+                    <strong class="font-bold text-primary">第二週</strong>
+                  </div>
+                  <div class="font-mono">
+                    <time datetime="2025-10-27T00:00">114/10/27 00:00</time> - <time datetime="2025-11-02T23:59">114/11/02 23:59</time>
+                  </div>
+                </div>
+                <div class="flex items-start text-bg-dark/80">
+                  <div class="w-14 flex-shrink-0 mr-4">
+                    <strong class="font-bold text-primary">第三週</strong>
+                  </div>
+                  <div class="font-mono">
+                    <time datetime="2025-11-03T00:00">114/11/03 00:00</time> - <time datetime="2025-11-09T23:59">114/11/09 23:59</time>
+                  </div>
+                </div>
+                <div class="flex items-start text-bg-dark/80">
+                  <div class="w-14 flex-shrink-0 mr-4">
+                    <strong class="font-bold text-primary">第四週</strong>
+                  </div>
+                  <div class="font-mono">
+                    <time datetime="2025-11-10T00:00">114/11/10 00:00</time> - <time datetime="2025-11-16T23:59">114/11/16 23:59</time>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <!-- 主辦單位 -->
@@ -352,7 +372,7 @@ tailwind.config = {
                     <span class="expand-icon" aria-hidden="true">▼</span>
                   </summary>
                   <div class="faq-content">
-                    <p>本活動未盡事宜，係依中華民國相關法令補充之，如因本活動涉訟，係依台灣台中地方法院為第一審管轄法院。</p>
+                    <p>本活動未盡事宜，係依中華民國相關法令補充之，如因本活動涉訟，係依台灣台北地方法院為第一審管轄法院。</p>
                   </div>
                 </details>
 
@@ -494,7 +514,7 @@ tailwind.config = {
                     <span class="expand-icon" aria-hidden="true">▼</span>
                   </summary>
                   <div class="faq-content">
-                    <p>主辦單位僅使用參加者所提供之個人資料於此次活動用途，且遵守【個人資料保護法】相關規定，以維護參加者權益。參加者同意於 <a href="https://cathayhcm.surveycake.biz/s/KeXYy" class="text-primary underline" target="_blank">https://cathayhcm.surveycake.biz/s/KeXYy</a> 填寫相關資料。</p>
+                    <p>主辦單位僅使用參加者所提供之個人資料於此次活動用途，且遵守【個人資料保護法】相關規定，以維護參加者權益。參加者於<a href="https://cathayhcm.surveycake.biz/s/KeXYy" target="_blank" rel="noopener noreferrer" class="text-primary underline hover:text-primary/80 transition-colors">https://cathayhcm.surveycake.biz/s/KeXYy</a> 填寫相關資料並同意主辦單位依下列「個資告知事項」內容進行蒐集與利用，詳見<a href="https://www.cathay-hcm.com.tw/tw/page/privacy" target="_blank" rel="noopener noreferrer" class="text-primary underline hover:text-primary/80 transition-colors">https://www.cathay-hcm.com.tw/tw/page/privacy</a>。</p>
                   </div>
                 </details>
 
