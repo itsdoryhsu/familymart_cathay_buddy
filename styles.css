@@ -187,6 +187,30 @@ a[role="button"] {
   border-color: var(--color-primary);
 }
 
+/* URL 斷行修復 - 防止手機版連結超出螢幕 */
+.faq-content a {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  display: inline;
+  max-width: 100%;
+}
+
+/* 手機版專用 URL 處理 */
+@media (max-width: 640px) {
+  .faq-content {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+  .faq-content a {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    line-height: 1.4;
+    /* 智能斷行：在適當位置斷行，避免孤立標點符號 */
+    word-break: break-word;
+  }
+}
+
 /* 列印樣式優化 */
 @media print {
   .cta-button {
@@ -194,7 +218,6 @@ a[role="button"] {
     color: var(--color-primary) !important;
     border: 2px solid var(--color-primary);
   }
-
 
   .faq-item {
     break-inside: avoid;
