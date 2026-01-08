@@ -63,10 +63,10 @@ tailwind.config = {
             🍽️ 我的飲食日記
           </h1>
           <p class="text-lg md:text-2xl font-semibold text-white mb-8">
-            拍下餐桌美食，天天抽$100禮券，週週再送健康好禮
+            拍下餐桌美食，天天抽 LINE POINT 100點，再送健康好禮
           </p>
           <a class="inline-block bg-primary text-white font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:bg-opacity-90 transition-transform transform hover:scale-105"
-             href="#"
+             href="https://page.line.me/jpc9732u?oat_referrer=PROFILE&openQrModal=true"
              role="button"
              aria-label="立即上傳照片參加抽獎活動">
             ✨立即上傳照片抽大獎✨
@@ -117,38 +117,46 @@ tailwind.config = {
         <!-- 活動重點資訊 -->
         <div class="text-center mt-10" role="complementary" aria-label="活動重點資訊">
           <p class="text-primary font-semibold mb-2">每日最多可上傳 3 餐，每餐都是獨立抽獎機會！</p>
-          <p class="text-sm text-bg-dark/60">
-            <time datetime="2025-10-20T11:00">活動期間：114/10/20 11:00</time> ~
-            <time datetime="2025-11-14T23:59">114/11/16 23:59</time>
-          </p>
         </div>
       </section>
       <!-- 獎品展示區塊 -->
       <section class="mb-16" aria-labelledby="prizes-section">
         <h2 id="prizes-section" class="text-3xl font-bold text-center mb-10 text-bg-dark">🎁 獎品清單：越吃越健康，越拍越幸運!</h2>
 
-        <div class="grid md:grid-cols-2 gap-8" role="region" aria-label="獎品展示">
-          <!-- 週獎品 -->
-          <article class="bg-white/50 rounded-lg shadow-md overflow-hidden flex flex-col md:flex-row items-center"
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" role="region" aria-label="獎品展示">
+          <!-- 整檔獎品 -->
+          <article class="bg-white/50 rounded-lg shadow-md overflow-hidden flex flex-col items-center"
                    aria-labelledby="weekly-prize">
-            <div class="md:w-2/5 h-64 md:h-full prize-image-tanita"
+            <div class="w-full h-48 prize-image-tanita"
                  role="img" aria-label="TANITA體組成計產品圖片"></div>
-            <div class="p-6 md:w-3/5">
-              <h3 id="weekly-prize" class="text-xl font-bold text-primary mb-2">🏆 週週抽</h3>
+            <div class="p-6 w-full text-center">
+              <h3 id="weekly-prize" class="text-xl font-bold text-primary mb-2">🏆 整檔抽</h3>
               <p class="text-lg font-semibold text-bg-dark mb-2">TANITA 11合1 藍牙智能體組成計 RD-953</p>
-              <p class="text-sm text-bg-dark/80">價值 $7,000，每週 1 名</p>
+              <p class="text-sm text-bg-dark/80">價值 $7,000，共 1 名</p>
             </div>
           </article>
 
           <!-- 日獎品 -->
-          <article class="bg-white/50 rounded-lg shadow-md overflow-hidden flex flex-col md:flex-row items-center"
+          <article class="bg-white/50 rounded-lg shadow-md overflow-hidden flex flex-col items-center"
                    aria-labelledby="daily-prize">
-            <div class="md:w-2/5 h-64 md:h-full prize-image-voucher"
+            <div class="w-full h-48 prize-image-voucher"
                  role="img" aria-label="便利商店電子禮券圖片"></div>
-            <div class="p-6 md:w-3/5">
-              <h3 id="daily-prize" class="text-xl font-bold text-primary mb-2">💰 天天週</h3>
-              <p class="text-lg font-semibold text-bg-dark mb-2">統一超商電子禮券 $100</p>
-              <p class="text-sm text-bg-dark/80">價值 $100，每日 3 名</p>
+            <div class="p-6 w-full text-center">
+              <h3 id="daily-prize" class="text-xl font-bold text-primary mb-2">💰 天天抽</h3>
+              <p class="text-lg font-semibold text-bg-dark mb-2">LINE POINTS 100點</p>
+              <p class="text-sm text-bg-dark/80">價值 $100，每日 1 名</p>
+            </div>
+          </article>
+
+          <!-- 新春加碼抽 -->
+          <article class="bg-white/50 rounded-lg shadow-md overflow-hidden flex flex-col items-center"
+                   aria-labelledby="spring-prize">
+            <div class="w-full h-48 prize-image-spring"
+                 role="img" aria-label="便利商店電子禮券圖片"></div>
+            <div class="p-6 w-full text-center">
+              <h3 id="spring-prize" class="text-xl font-bold text-primary mb-2">🎊 新春加碼抽</h3>
+              <p class="text-lg font-semibold text-bg-dark mb-2">LINE POINT 100點</p>
+              <p class="text-sm text-bg-dark/80">價值 $100，2/14 - 2/22 每日加抽 5 名</p>
             </div>
           </article>
         </div>
@@ -164,51 +172,12 @@ tailwind.config = {
               <h3 class="text-xl font-semibold mb-2 text-bg-dark">重要時程</h3>
               <ul class="list-disc list-inside text-bg-dark/80 space-y-1" role="list">
                 <li>活動期間: <strong class="font-bold text-primary font-mono">
-                  <time datetime="2025-10-20">114/10/20</time> - <time datetime="2025-11-16">114/11/16</time>
+                  <time datetime="">即日起</time> - <time datetime="2026-02-28">115/02/28</time>
                 </strong></li>
                 <li>得獎公佈: <strong class="font-bold text-primary font-mono">
-                  <time datetime="2025-11-30">114/11/30</time>
+                  <time datetime="2026-03-14">115/03/14</time>
                 </strong> (將於本活動頁公佈)</li>
               </ul>
-            </div>
-
-            <!-- 活動週次安排 -->
-            <div class="mb-6 border-b border-blue-200/80 pb-6">
-              <h3 class="text-xl font-semibold mb-4 text-bg-dark">活動週次安排</h3>
-              <div class="space-y-3" role="list">
-                <div class="flex items-start text-bg-dark/80">
-                  <div class="w-14 flex-shrink-0 mr-4">
-                    <strong class="font-bold text-primary">第一週</strong>
-                  </div>
-                  <div class="font-mono">
-                    <time datetime="2025-10-20T11:00">114/10/20 11:00</time> - <time datetime="2025-10-26T23:59">114/10/26 23:59</time>
-                  </div>
-                </div>
-                <div class="flex items-start text-bg-dark/80">
-                  <div class="w-14 flex-shrink-0 mr-4">
-                    <strong class="font-bold text-primary">第二週</strong>
-                  </div>
-                  <div class="font-mono">
-                    <time datetime="2025-10-27T00:00">114/10/27 00:00</time> - <time datetime="2025-11-02T23:59">114/11/02 23:59</time>
-                  </div>
-                </div>
-                <div class="flex items-start text-bg-dark/80">
-                  <div class="w-14 flex-shrink-0 mr-4">
-                    <strong class="font-bold text-primary">第三週</strong>
-                  </div>
-                  <div class="font-mono">
-                    <time datetime="2025-11-03T00:00">114/11/03 00:00</time> - <time datetime="2025-11-09T23:59">114/11/09 23:59</time>
-                  </div>
-                </div>
-                <div class="flex items-start text-bg-dark/80">
-                  <div class="w-14 flex-shrink-0 mr-4">
-                    <strong class="font-bold text-primary">第四週</strong>
-                  </div>
-                  <div class="font-mono">
-                    <time datetime="2025-11-10T00:00">114/11/10 00:00</time> - <time datetime="2025-11-16T23:59">114/11/16 23:59</time>
-                  </div>
-                </div>
-              </div>
             </div>
 
             <!-- 主辦單位 -->
@@ -223,7 +192,7 @@ tailwind.config = {
       <!-- 抽獎結果公告區塊 -->
       <section class="mb-16" aria-labelledby="winners-section">
         <div class="max-w-3xl mx-auto">
-          <h2 id="winners-section" class="text-3xl font-bold text-center mb-8 text-text">🎊 抽獎結果公告</h2>
+          <h2 id="winners-section" class="text-3xl font-bold text-center mb-8 text-text">🎊 抽獎結果</h2>
 
           <div class="bg-gray-100/80 rounded-lg p-6 sm:p-8" role="region" aria-label="抽獎結果資訊">
 
@@ -234,71 +203,25 @@ tailwind.config = {
               </div>
               <h3 class="text-xl font-semibold mb-3 text-text">中獎名單即將公佈</h3>
               <p class="text-text/80 mb-4">
-                得獎公佈時間：<strong class="font-bold text-primary">
-                  <time datetime="2025-11-30">114年11月30日</time>
+                得獎公佈時間: <strong class="font-bold text-primary">
+                  <time datetime="2026-03-14">115年03月14日</time>
                 </strong>
               </p>
               <p class="text-sm text-text/60">
-                屆時將在此頁面公佈所有中獎者名單，請密切關注！
+                屆時將在此頁面公佈中獎者名單，請密切關注！
               </p>
-            </div>
-
-            <!-- 公告後實際名單 (11/30後顯示) -->
-            <div id="winners-list" class="hidden">
-
-              <!-- 週獎品中獎者 -->
-              <div class="mb-8 border-b border-gray-200 pb-6">
-                <h3 class="text-xl font-semibold mb-4 text-text flex items-center">
-                  <span class="text-2xl mr-2">🏆</span>
-                  TANITA體組成計中獎者 (每週1名)
-                </h3>
-
-                <div class="grid sm:grid-cols-2 gap-4">
-                  <div class="bg-white/70 rounded-lg p-4">
-                    <h4 class="font-semibold text-primary mb-2">第一週 (10/20-10/26)</h4>
-                    <p class="text-text/80">將於11/30公佈</p>
-                  </div>
-                  <div class="bg-white/70 rounded-lg p-4">
-                    <h4 class="font-semibold text-primary mb-2">第二週 (10/27-11/02)</h4>
-                    <p class="text-text/80">將於11/30公佈</p>
-                  </div>
-                  <div class="bg-white/70 rounded-lg p-4">
-                    <h4 class="font-semibold text-primary mb-2">第三週 (11/03-11/09)</h4>
-                    <p class="text-text/80">將於11/30公佈</p>
-                  </div>
-                  <div class="bg-white/70 rounded-lg p-4">
-                    <h4 class="font-semibold text-primary mb-2">第四週 (11/10-11/16)</h4>
-                    <p class="text-text/80">將於11/30公佈</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- 日獎品中獎者 -->
-              <div>
-                <h3 class="text-xl font-semibold mb-4 text-text flex items-center">
-                  <span class="text-2xl mr-2">💰</span>
-                  $100禮券中獎者 (每日3名)
-                </h3>
-
-                <div class="bg-white/70 rounded-lg p-4">
-                  <p class="text-text/80 text-center">
-                    完整中獎名單將於 <strong class="text-primary">114年11月30日</strong> 在此頁面公佈
-                  </p>
-                </div>
-              </div>
-
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 活動規範與細則區塊 -->
+       <!-- 活動規範與細則區塊 -->
       <section class="mb-16" aria-labelledby="rules-section">
-        <div class="max-w-3xl mx-auto">
-          <h2 id="rules-section" class="text-3xl font-bold text-center mb-8 text-bg-dark">📖 活動規範與細則</h2>
+        <div class="max-w-3xl lg:max-w-5xl mx-auto">
+          <h2 id="rules-section" class="text-3xl font-bold text-center mb-8 text-bg-dark">📖 活動規範</h2>
 
           <div class="bg-gray-100/80 rounded-lg p-6 sm:p-8" role="region" aria-label="活動規範詳情">
-            <p class="text-center text-sm text-bg-dark/70 mb-8">凡參加者，即視為已充分瞭解並同意遵守本活動之各項規定辦法。</p>
+            <p class="text-center text-base text-bg-dark/70 mb-8 lg:whitespace-nowrap">凡參加者，均視為已充分瞭解並同意遵守本活動規定，並同意提供必要個人資料予主辦單位作為活動用途。</p>
 
               <!-- FAQ收合式規則區塊 -->
               <div class="faq-container" role="region" aria-label="常見問題與活動規則">
@@ -306,19 +229,19 @@ tailwind.config = {
                 <!-- 一、活動辦法與主辦單位權利相關 -->
                 <h3 class="text-lg font-medium text-gray-700 mb-4 mt-6">🧾 活動辦法與主辦單位權利相關</h3>
 
-                <details class="faq-item" id="faq-q1" open>
-                  <summary class="faq-summary" role="button" aria-expanded="true" tabindex="0">
-                    <span>Q1：主辦單位是否可以修改或終止活動？</span>
+                <details class="faq-item" id="faq-q1">
+                  <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
+                    <span>Q1:主辦單位是否可以修改或終止活動?</span>
                     <span class="expand-icon" aria-hidden="true">▼</span>
                   </summary>
                   <div class="faq-content">
-                    <p>主辦單位保留隨時修正、暫停、終止或解釋本活動之最終權利（包括但不限於更換活動、提前終止或延長活動時間之最終決定權等事項），並以本活動網站公告為準。</p>
+                    <p>主辦單位保留隨時修正、暫停、終止或解釋本活動之最終權利(包括但不限於更換活動、提前終止或延長活動時間之最終決定權等事項)，並以本活動網站公告為準。</p>
                   </div>
                 </details>
 
                 <details class="faq-item" id="faq-q2">
                   <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
-                    <span>Q2：若因天災或不可抗力導致活動受影響，會如何處理？</span>
+                    <span>Q2:若因天災或不可抗力導致活動受影響，會如何處理?</span>
                     <span class="expand-icon" aria-hidden="true">▼</span>
                   </summary>
                   <div class="faq-content">
@@ -328,7 +251,7 @@ tailwind.config = {
 
                 <details class="faq-item" id="faq-q3">
                   <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
-                    <span>Q3：若活動發生技術問題造成資料遺失或錯誤，主辦單位會負責嗎？</span>
+                    <span>Q3:若活動發生技術問題造成資料遺失或錯誤，主辦單位會負責嗎?</span>
                     <span class="expand-icon" aria-hidden="true">▼</span>
                   </summary>
                   <div class="faq-content">
@@ -338,7 +261,7 @@ tailwind.config = {
 
                 <details class="faq-item" id="faq-q4">
                   <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
-                    <span>Q4：主辦單位可否修改活動內容或獎項？</span>
+                    <span>Q4:主辦單位可否修改活動內容或獎項?</span>
                     <span class="expand-icon" aria-hidden="true">▼</span>
                   </summary>
                   <div class="faq-content">
@@ -348,7 +271,7 @@ tailwind.config = {
 
                 <details class="faq-item" id="faq-q5">
                   <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
-                    <span>Q5：若活動有未盡事宜，如何處理？</span>
+                    <span>Q5:若活動有未盡事宜，如何處理?</span>
                     <span class="expand-icon" aria-hidden="true">▼</span>
                   </summary>
                   <div class="faq-content">
@@ -358,7 +281,7 @@ tailwind.config = {
 
                 <details class="faq-item" id="faq-q6">
                   <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
-                    <span>Q6：活動網頁內容是否可以複製使用？</span>
+                    <span>Q6:活動網頁內容是否可以複製使用?</span>
                     <span class="expand-icon" aria-hidden="true">▼</span>
                   </summary>
                   <div class="faq-content">
@@ -368,7 +291,7 @@ tailwind.config = {
 
                 <details class="faq-item" id="faq-q7">
                   <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
-                    <span>Q7：若活動相關爭議需進入法律程序，哪裡是管轄法院？</span>
+                    <span>Q7:若活動相關爭議需進入法律程序，哪裡是管轄法院?</span>
                     <span class="expand-icon" aria-hidden="true">▼</span>
                   </summary>
                   <div class="faq-content">
@@ -381,7 +304,7 @@ tailwind.config = {
 
                 <details class="faq-item" id="faq-q8">
                   <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
-                    <span>Q8：誰可以參加本活動？</span>
+                    <span>Q8:誰可以參加本活動?</span>
                     <span class="expand-icon" aria-hidden="true">▼</span>
                   </summary>
                   <div class="faq-content">
@@ -391,31 +314,31 @@ tailwind.config = {
 
                 <details class="faq-item" id="faq-q9">
                   <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
-                    <span>Q9：若參加者使用不當方式參與活動會如何？</span>
+                    <span>Q9:若參加者使用不當方式參與活動會如何?</span>
                     <span class="expand-icon" aria-hidden="true">▼</span>
                   </summary>
                   <div class="faq-content">
-                    <p>參加者若以惡意之電腦程式或其他明顯違反活動之正常運行之方式，意圖混淆或影響活動結果者，一經主辦單位察覺得立即取消參加者之參賽、抽獎及得獎資格，並得追回獎品。參加者對於因違反相關規定所產生之一切法律責成，需自行負擔。</p>
+                    <p>參加者若以惡意之電腦程式或其他明顯違反活動之正常運行之方式，意圖混淆或影響活動結果者，一經主辦單位察覺得立即取消參加者之參賽、抽獎及得獎資格，並得追回獎品。參加者對於因違反相關規定所產生之一切法律責任，需自行負擔。</p>
                   </div>
                 </details>
 
                 <details class="faq-item" id="faq-q10">
                   <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
-                    <span>Q10：若違反注意事項會有什麼後果？</span>
+                    <span>Q10:若違反注意事項會有什麼後果?</span>
                     <span class="expand-icon" aria-hidden="true">▼</span>
                   </summary>
                   <div class="faq-content">
-                    <p>參加者如有違反本注意事項，即視同不具參加資格；中獎者如有違反本注意事項，則將取消其得獎資格不予給獎，如已給獎者，則應將獎項返還，該違反之中獎者並應就主辦單位因此所受之損害（包括但不限於侵權損害賠償、商譽損失、訴訟費用、律師費用）負完全之賠償責任。</p>
+                    <p>參加者如有違反本注意事項，即視同不具參加資格;中獎者如有違反本注意事項，則將取消其得獎資格不予給獎，如已給獎者，則應將獎項返還，該違反之中獎者並應就主辦單位因此所受之損害(包括但不限於侵權損害賠償、商譽損失、訴訟費用、律師費用)負完全之賠償責任。</p>
                   </div>
                 </details>
 
                 <details class="faq-item" id="faq-q11">
                   <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
-                    <span>Q11：若中獎者冒用他人身分或違規，主辦單位可以怎麼處理？</span>
+                    <span>Q11:若中獎者冒用他人身分或違規，主辦單位可以怎麼處理?</span>
                     <span class="expand-icon" aria-hidden="true">▼</span>
                   </summary>
                   <div class="faq-content">
-                    <p>中獎者如有冒用他人身分、不符合或違反本活動規定事項者，主辦單位保有取消其中獎資格的權利。主辦單位無需負任何責任；倘因此造成主辦單位或任何第三人損害，主辦單位得提起相關訴訟。</p>
+                    <p>中獎者如有冒用他人身分、不符合或違反本活動規定事項者，主辦單位保有取消其中獎資格的權利。主辦單位無需負任何責任;倘因此造成主辦單位或任何第三人損害，主辦單位得提起相關訴訟。</p>
                   </div>
                 </details>
 
@@ -424,7 +347,7 @@ tailwind.config = {
 
                 <details class="faq-item" id="faq-q12">
                   <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
-                    <span>Q12：獎品可以要求更換或折現嗎？</span>
+                    <span>Q12:獎品可以要求更換或折現嗎?</span>
                     <span class="expand-icon" aria-hidden="true">▼</span>
                   </summary>
                   <div class="faq-content">
@@ -434,7 +357,7 @@ tailwind.config = {
 
                 <details class="faq-item" id="faq-q13">
                   <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
-                    <span>Q13：若獎品缺貨或無法提供，會如何處理？</span>
+                    <span>Q13:若獎品缺貨或無法提供，會如何處理?</span>
                     <span class="expand-icon" aria-hidden="true">▼</span>
                   </summary>
                   <div class="faq-content">
@@ -444,7 +367,7 @@ tailwind.config = {
 
                 <details class="faq-item" id="faq-q14">
                   <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
-                    <span>Q14：獎品寄送是否有地區限制？</span>
+                    <span>Q14:獎品寄送是否有地區限制?</span>
                     <span class="expand-icon" aria-hidden="true">▼</span>
                   </summary>
                   <div class="faq-content">
@@ -454,21 +377,21 @@ tailwind.config = {
 
                 <details class="faq-item" id="faq-q15">
                   <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
-                    <span>Q15：獎品寄送時間是什麼時候？</span>
+                    <span>Q15:獎品寄送時間是什麼時候?</span>
                     <span class="expand-icon" aria-hidden="true">▼</span>
                   </summary>
                   <div class="faq-content">
-                    <p>主辦單位依兌換者所提供之地址寄送獎項，本活動獎項贈品將統一於114年12月10日前寄出。如因個人因素導致寄送二次均無法順利送交，得獎者將被視為自動放棄兌獎權益，主辦單位將不再另行配送。</p>
+                    <p>主辦單位依兌換者所提供之地址寄送獎項，本活動獎項贈品將統一於115年4月15日前寄出。如因個人因素導致寄送二次均無法順利送交，得獎者將被視為自動放棄兌獎權益，主辦單位將不再另行配送。</p>
                   </div>
                 </details>
 
                 <details class="faq-item" id="faq-q16">
                   <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
-                    <span>Q16：若對獎項有疑問，該如何聯絡？</span>
+                    <span>Q16:若對獎項有疑問，該如何聯絡?</span>
                     <span class="expand-icon" aria-hidden="true">▼</span>
                   </summary>
                   <div class="faq-content">
-                    <p>未收到獎項、對收到的獎項品質或內容有疑慮者，請於114年12月15日前來電本公司活動專線：02-27392029 分機1016，服務時間：週一至週五09:00～17:00（國定例假日恕不提供接聽服務）。逾期視同放棄獎項兌換權利或獎項收件無誤。</p>
+                    <p> 未收到獎項、對收到的獎項品質或內容有疑慮者，請於115年4月22日前來電本公司活動專線:02-27392029 分機1016，服務時間:週一至週五09:00~17:00(國定例假日恕不提供接聽服務)。逾期視同放棄獎項兌換權利或獎項收件無誤。</p>
                   </div>
                 </details>
 
@@ -477,21 +400,21 @@ tailwind.config = {
 
                 <details class="faq-item" id="faq-q17">
                   <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
-                    <span>Q17：中獎者需要繳稅嗎？</span>
+                    <span>Q17:中獎者需要繳稅嗎?</span>
                     <span class="expand-icon" aria-hidden="true">▼</span>
                   </summary>
                   <div class="faq-content">
-                    <p>依中華民國稅法規定，若中獎者為本國人，獎項價值超過新台幣1,000元(含)，需依規定填寫並繳交身分證影本供報稅使用，並將以新台幣計價列入年度之個人綜合所得稅申報。若獎項價值超過新台幣20,000元(含)，中獎者依法需預繳10%稅金，待中獎者付清稅金後方可領獎。依中華民國稅法規定，中獎者若非中華民國國境內設籍之國人（即依法於課稅年度內，在中華民國境內居住未達183天之本國人含大陸人士及外國人），不論中獎者所得獎項之價值，需預先扣繳20%機會中獎稅金，待中獎者付清稅金後方可領獎。如依其他法令規定另須代扣繳其他稅費者，亦於扣除相關金額後，始為實際發放金額。若未能依法繳納應繳稅額，即視為喪失中獎資格。參加本活動者參加本活動而須支付任何稅捐皆為參加本活動者之義務，概與主辦單位無關。前述稅捐法規如有更新或變動者，依修正後之規定辦理。</p>
+                    <p>依中華民國稅法規定，若中獎者為本國人，獎項價值超過新台幣1,000元(含)，需依規定填寫並繳交身分證影本供報稅使用，並將以新台幣計價列入年度之個人綜合所得稅申報。若獎項價值超過新台幣20,000元(含)，中獎者依法需預繳10%稅金，待中獎者付清稅金後方可領獎。依中華民國稅法規定，中獎者若非中華民國國境內設籍之國人(即依法於課稅年度內，在中華民國境內居住未達183天之本國人含大陸人士及外國人)，不論中獎者所得獎項之價值，需預先扣繳20%機會中獎稅金，待中獎者付清稅金後方可領獎。如依其他法令規定另須代扣繳其他稅費者，亦於扣除相關金額後，始為實際發放金額。若未能依法繳納應繳稅額，即視為喪失中獎資格。參加本活動者參加本活動而須支付任何稅捐皆為參加本活動者之義務，概與主辦單位無關。前述稅捐法規如有更新或變動者，依修正後之規定辦理。</p>
                   </div>
                 </details>
 
                 <details class="faq-item" id="faq-q18">
                   <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
-                    <span>Q18：中獎者需要填寫哪些領獎資料？</span>
+                    <span>Q18:中獎者填寫領獎資料有哪些注意事項?</span>
                     <span class="expand-icon" aria-hidden="true">▼</span>
                   </summary>
                   <div class="faq-content">
-                    <p>填寫領獎所需資料，如：資料錯誤或不全等，視同放棄中獎資格。相關個人資訊由主辦單位於活動範圍內進行蒐集、電腦處理及利用於此次活動用途，但不做其他用途並授權主辦單位在必要時公開公佈部分姓名或個人資料。</p>
+                    <p>填寫領獎所需資料，如:資料錯誤或不全等，視同放棄中獎資格。相關個人資訊由主辦單位於活動範圍內進行蒐集、電腦處理及利用於此次活動用途，但不做其他用途並授權主辦單位在必要時公開公佈部分姓名或個人資料。</p>
                   </div>
                 </details>
 
@@ -500,7 +423,7 @@ tailwind.config = {
 
                 <details class="faq-item" id="faq-q19">
                   <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
-                    <span>Q19：中獎者若為未成年人，如何領獎？</span>
+                    <span>Q19:中獎者若為未成年人，如何領獎?</span>
                     <span class="expand-icon" aria-hidden="true">▼</span>
                   </summary>
                   <div class="faq-content">
@@ -510,11 +433,11 @@ tailwind.config = {
 
                 <details class="faq-item" id="faq-q20">
                   <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
-                    <span>Q20：主辦單位如何保護個人資料？</span>
+                    <span>Q20:主辦單位如何保護個人資料?</span>
                     <span class="expand-icon" aria-hidden="true">▼</span>
                   </summary>
                   <div class="faq-content">
-                    <p>主辦單位僅使用參加者所提供之個人資料於此次活動用途，且遵守【個人資料保護法】相關規定，以維護參加者權益。參加者於<a href="https://cathayhcm.surveycake.biz/s/KeXYy" target="_blank" rel="noopener noreferrer" class="text-primary underline hover:text-primary/80 transition-colors">https://cathayhcm.surveycake.biz/s/KeXYy</a> 填寫相關資料並同意主辦單位依下列「個資告知事項」內容進行蒐集與利用，詳見<a href="https://www.cathay-hcm.com.tw/tw/page/privacy" target="_blank" rel="noopener noreferrer" class="text-primary underline hover:text-primary/80 transition-colors">https://www.cathay-hcm.com.tw/tw/page/privacy</a>。</p>
+                    <p>主辦單位僅使用參加者所提供之個人資料於此次活動用途，且遵守【個人資料保護法】相關規定，以維護參加者權益。得獎者於<a href="https://cathayhcm.surveycake.biz/s/DVLdY" target="_blank" rel="noopener noreferrer" class="text-primary underline hover:text-primary/80 transition-colors">https://cathayhcm.surveycake.biz/s/KeXYy</a> 填寫相關資料並同意主辦單位依下列「個資告知事項」內容進行蒐集與利用，詳見<a href="https://www.cathay-hcm.com.tw/tw/page/privacy" target="_blank" rel="noopener noreferrer" class="text-primary underline hover:text-primary/80 transition-colors">https://www.cathay-hcm.com.tw/tw/page/privacy</a>。</p>
                   </div>
                 </details>
 
@@ -538,20 +461,11 @@ tailwind.config = {
   <script>
     // 抽獎結果顯示邏輯
     function checkAnnouncementDate() {
-      const announcementDate = new Date('2025-11-30T00:00:00+08:00');
-      const currentDate = new Date();
-
       const previewElement = document.getElementById('announcement-preview');
-      const winnersListElement = document.getElementById('winners-list');
 
-      if (currentDate >= announcementDate) {
-        // 11/30 後顯示中獎名單
-        previewElement.classList.add('hidden');
-        winnersListElement.classList.remove('hidden');
-      } else {
-        // 11/30 前顯示預告
+      // 確保預告狀態始終顯示
+      if (previewElement) {
         previewElement.classList.remove('hidden');
-        winnersListElement.classList.add('hidden');
       }
     }
 

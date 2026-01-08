@@ -42,6 +42,7 @@ body {
   background-position: center !important;
   min-height: 200px !important;
   margin-left: 10px !important;
+  margin-top: 10px !important;
 }
 
 .prize-image-voucher {
@@ -51,12 +52,24 @@ body {
   background-position: center !important;
   min-height: 200px !important;
   margin-left: 10px !important;
+  margin-top: 10px !important;
+}
+
+.prize-image-spring {
+  background-image: url('./assets/voucher-product.png?v=20251015') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  min-height: 200px !important;
+  margin-left: 10px !important;
+  margin-top: 10px !important;
 }
 
 /* 響應式圖片優化 - 手機版強制設定 */
 @media (max-width: 768px) {
   .prize-image-tanita,
-  .prize-image-voucher {
+  .prize-image-voucher,
+  .prize-image-spring {
     min-height: 250px !important;
     background-size: contain !important;
     background-repeat: no-repeat !important;
@@ -64,6 +77,7 @@ body {
     width: 100% !important;
     display: block !important;
     margin-left: 10px !important;
+    margin-top: 10px !important;
   }
 }
 
