@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🍽️ 我的飲食日記 - 拍照抽大獎</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="stylesheet" href="styles.css">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: "#019863",
+        "bg-light": "#f5f8f7"
+      },
+      fontFamily: {
+        display: ["Plus Jakarta Sans", "sans-serif"]
+      }
+    }
+  }
+};
+</script>
+</head>
+<body class="bg-bg-light font-display">
+  <!-- 主要容器 -->
+  <div class="w-full min-h-screen overflow-x-hidden">
+    <!-- 頁面主體區域 -->
+    <main class="mx-auto px-4 sm:px-6 lg:px-8 py-12" style="max-width: 985px;" role="main" aria-label="飲食日記活動頁面">
+
+      <!-- 導航區塊：公司logo -->
+      <nav class="flex items-center justify-between mb-8" role="navigation" aria-label="網站導航">
+        <a href="https://www.cathayhealth.com.tw/"
+           class="flex items-center space-x-3 hover:opacity-80 transition-opacity"
+           aria-label="國泰健康管理官方網站">
+          <!-- 公司Logo區域 -->
+          <div class="h-12 flex items-center">
+            <img src="assets/logo.png?v=20251015"
+                 alt="國泰健康管理企業標誌"
+                 class="h-10 w-auto object-contain"
+                 loading="lazy">
+          </div>
+        </a>
+
+        <!-- 錨點導航選項 -->
+        <div class="hidden md:flex space-x-6">
+          <a href="#participation-steps" class="transition-colors hover:opacity-70" style="color: #0f231c;">參加方式</a>
+          <a href="#prizes-section" class="transition-colors hover:opacity-70" style="color: #0f231c;">獎品清單</a>
+          <a href="#schedule-section" class="transition-colors hover:opacity-70" style="color: #0f231c;">活動時程</a>
+          <a href="#winners-section" class="transition-colors hover:opacity-70" style="color: #0f231c;">抽獎公告</a>
+          <a href="#rules-section" class="transition-colors hover:opacity-70" style="color: #0f231c;">活動規範</a>
+        </div>
+      </nav>
+
+      <!-- Hero區塊：主視覺與CTA -->
+      <header class="relative rounded-xl overflow-hidden mb-16" role="banner">
+        <div class="absolute inset-0 bg-cover bg-center" style='background-image: url("assets/background.png?v=20251015");' aria-hidden="true"></div>
+        <div class="relative z-10 flex flex-col items-center justify-center min-h-[480px] p-8 text-center bg-black bg-opacity-30">
+          <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4">
+            🍽️ 我的飲食日記
+          </h1>
+          <p class="text-lg md:text-2xl font-semibold text-white mb-8">
+            拍下餐桌美食，天天抽 LINE POINT 100點，再送健康好禮
+          </p>
+          <a class="inline-block bg-primary text-white font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:bg-opacity-90 transition-transform transform hover:scale-105"
+             href="https://page.line.me/jpc9732u?oat_referrer=PROFILE&openQrModal=true"
+             role="button"
+             aria-label="立即上傳照片參加抽獎活動">
+            ✨立即上傳照片抽大獎✨
+          </a>
+        </div>
+      </header>
+      <!-- 參與步驟區塊 -->
+      <section class="mb-16" aria-labelledby="participation-steps">
+        <h2 id="participation-steps" class="text-3xl font-bold text-center mb-10 text-bg-dark">📱 兩步驟輕鬆參加！</h2>
+
+        <!-- 步驟流程區塊 -->
+        <div role="region" aria-label="參加步驟流程" class="max-w-4xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-12">
+
+            <!-- 步驟一 -->
+            <div class="text-center">
+              <h3 class="font-bold text-primary text-xl mb-2">步驟一</h3>
+              <p class="text-text mb-6 leading-relaxed">
+                拍下您的餐點照片，紀錄日常飲食。
+              </p>
+              <div class="flex justify-center overflow-hidden max-w-sm mx-auto rounded-xl h-64">
+                <img src="assets/step2.png?v=20251015"
+                     alt="步驟一：拍下餐點照片"
+                     class="w-full h-full object-cover"
+                     style="transform: scale(1.5);"
+                     loading="lazy">
+              </div>
+            </div>
+
+            <!-- 步驟二 -->
+            <div class="text-center">
+              <h3 class="font-bold text-primary text-xl mb-2">步驟二</h3>
+              <p class="text-text mb-6 leading-relaxed">
+                上傳餐點照片至LINE聊天室，即獲得抽獎資格！
+              </p>
+              <div class="flex justify-center overflow-hidden max-w-sm mx-auto rounded-xl h-64">
+                <img src="assets/step3.png?v=20251015"
+                     alt="步驟二：上傳照片抽獎"
+                     class="w-full h-full object-cover"
+                     style="transform: scale(1.2);"
+                     loading="lazy">
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 活動重點資訊 -->
+        <div class="text-center mt-10" role="complementary" aria-label="活動重點資訊">
+          <p class="text-primary font-semibold mb-2">每日最多可上傳 3 餐，每餐都是獨立抽獎機會！</p>
+        </div>
+      </section>
+      <!-- 獎品展示區塊 -->
+      <section class="mb-16" aria-labelledby="prizes-section">
+        <h2 id="prizes-section" class="text-3xl font-bold text-center mb-10 text-bg-dark">🎁 獎品清單：越吃越健康，越拍越幸運!</h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" role="region" aria-label="獎品展示">
+          <!-- 整檔獎品 -->
+          <article class="bg-white/50 rounded-lg shadow-md overflow-hidden flex flex-col items-center"
+                   aria-labelledby="weekly-prize">
+            <div class="w-full h-48 prize-image-tanita"
+                 role="img" aria-label="TANITA體組成計產品圖片"></div>
+            <div class="p-6 w-full text-center">
+              <h3 id="weekly-prize" class="text-xl font-bold text-primary mb-2">🏆 整檔抽</h3>
+              <p class="text-lg font-semibold text-bg-dark mb-2">TANITA 11合1 藍牙智能體組成計 RD-953</p>
+              <p class="text-sm text-bg-dark/80">價值 $7,000，共 1 名</p>
+            </div>
+          </article>
+
+          <!-- 日獎品 -->
+          <article class="bg-white/50 rounded-lg shadow-md overflow-hidden flex flex-col items-center"
+                   aria-labelledby="daily-prize">
+            <div class="w-full h-48 prize-image-voucher"
+                 role="img" aria-label="便利商店電子禮券圖片"></div>
+            <div class="p-6 w-full text-center">
+              <h3 id="daily-prize" class="text-xl font-bold text-primary mb-2">💰 天天抽</h3>
+              <p class="text-lg font-semibold text-bg-dark mb-2">LINE POINTS 100點</p>
+              <p class="text-sm text-bg-dark/80">價值 $100，每日 1 名</p>
+            </div>
+          </article>
+
+          <!-- 新春加碼抽 -->
+          <article class="bg-white/50 rounded-lg shadow-md overflow-hidden flex flex-col items-center"
+                   aria-labelledby="spring-prize">
+            <div class="w-full h-48 prize-image-spring"
+                 role="img" aria-label="便利商店電子禮券圖片"></div>
+            <div class="p-6 w-full text-center">
+              <h3 id="spring-prize" class="text-xl font-bold text-primary mb-2">🎊 新春加碼抽</h3>
+              <p class="text-lg font-semibold text-bg-dark mb-2">LINE POINT 100點</p>
+              <p class="text-sm text-bg-dark/80">價值 $100，2/14 - 2/22 每日加抽 5 名</p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- 活動時程區塊 -->
+      <section class="mb-16" aria-labelledby="schedule-section">
+        <div class="max-w-3xl mx-auto">
+          <h2 id="schedule-section" class="text-3xl font-bold text-center mb-8 text-bg-dark">🗓️ 活動時程與細則</h2>
+
+          <div class="bg-gray-100/80 rounded-lg p-6 sm:p-8" role="region" aria-label="活動時程資訊">
+            <!-- 重要時程 -->
+            <div class="mb-6 border-b border-blue-200/80 pb-6">
+              <h3 class="text-xl font-semibold mb-2 text-bg-dark">重要時程</h3>
+              <ul class="list-disc list-inside text-bg-dark/80 space-y-1" role="list">
+                <li>活動期間: <strong class="font-bold text-primary font-mono">
+                  <time datetime="">即日起</time> - <time datetime="2026-02-28">115/02/28</time>
+                </strong></li>
+                <li>得獎公佈: <strong class="font-bold text-primary font-mono">
+                  <time datetime="2026-03-14">115/03/14</time>
+                </strong> (將於本活動頁公佈)</li>
+              </ul>
+            </div>
+
+            <!-- 主辦單位 -->
+            <div>
+              <h3 class="text-xl font-semibold mb-2 text-bg-dark">主辦單位</h3>
+              <p class="text-bg-dark/80">國泰健康管理顧問股份有限公司</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 抽獎結果公告區塊 -->
+      <section class="mb-16" aria-labelledby="winners-section">
+        <div class="max-w-3xl mx-auto">
+          <h2 id="winners-section" class="text-3xl font-bold text-center mb-8 text-text">🎊 抽獎結果</h2>
+
+          <div class="bg-gray-100/80 rounded-lg p-6 sm:p-8" role="region" aria-label="抽獎結果資訊">
+
+            <!-- 公告前預告狀態 -->
+            <div id="announcement-preview" class="text-center">
+              <div class="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
+                <span class="text-2xl">⏰</span>
+              </div>
+              <h3 class="text-xl font-semibold mb-3 text-text">中獎名單即將公佈</h3>
+              <p class="text-text/80 mb-4">
+                得獎公佈時間: <strong class="font-bold text-primary">
+                  <time datetime="2026-03-14">115年03月14日</time>
+                </strong>
+              </p>
+              <p class="text-sm text-text/60">
+                屆時將在此頁面公佈中獎者名單，請密切關注！
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+       <!-- 活動規範與細則區塊 -->
+      <section class="mb-16" aria-labelledby="rules-section">
+        <div class="max-w-3xl lg:max-w-5xl mx-auto">
+          <h2 id="rules-section" class="text-3xl font-bold text-center mb-8 text-bg-dark">📖 活動規範</h2>
+
+          <div class="bg-gray-100/80 rounded-lg p-6 sm:p-8" role="region" aria-label="活動規範詳情">
+            <p class="text-center text-base text-bg-dark/70 mb-8 lg:whitespace-nowrap">凡參加者，均視為已充分瞭解並同意遵守本活動規定，並同意提供必要個人資料予主辦單位作為活動用途。</p>
+
+              <!-- FAQ收合式規則區塊 -->
+              <div class="faq-container" role="region" aria-label="常見問題與活動規則">
+
+                <!-- 一、活動辦法與主辦單位權利相關 -->
+                <h3 class="text-lg font-medium text-gray-700 mb-4 mt-6">🧾 活動辦法與主辦單位權利相關</h3>
+
+                <details class="faq-item" id="faq-q1">
+                  <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
+                    <span>Q1:主辦單位是否可以修改或終止活動?</span>
+                    <span class="expand-icon" aria-hidden="true">▼</span>
+                  </summary>
+                  <div class="faq-content">
+                    <p>主辦單位保留隨時修正、暫停、終止或解釋本活動之最終權利(包括但不限於更換活動、提前終止或延長活動時間之最終決定權等事項)，並以本活動網站公告為準。</p>
+                  </div>
+                </details>
+
+                <details class="faq-item" id="faq-q2">
+                  <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
+                    <span>Q2:若因天災或不可抗力導致活動受影響，會如何處理?</span>
+                    <span class="expand-icon" aria-hidden="true">▼</span>
+                  </summary>
+                  <div class="faq-content">
+                    <p>如遇天災、地震、颱風、疫情、停電、罷工等不可抗力或非可歸責於主辦單位之事件，主辦單位保留變更活動日期與方式之權利。</p>
+                  </div>
+                </details>
+
+                <details class="faq-item" id="faq-q3">
+                  <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
+                    <span>Q3:若活動發生技術問題造成資料遺失或錯誤，主辦單位會負責嗎?</span>
+                    <span class="expand-icon" aria-hidden="true">▼</span>
+                  </summary>
+                  <div class="faq-content">
+                    <p>本活動如有任何因電腦、網路、電話、技術或其他不可歸責於主辦單位之事由，而使活動參加者所登錄之資料有所遺失、錯誤、無法辨識或毀損所導致資料無效之狀況，主辦單位不負任何法律責任，本活動參加者及中獎者亦不得異議。如發生前述情形，主辦單位將不做任何通知。</p>
+                  </div>
+                </details>
+
+                <details class="faq-item" id="faq-q4">
+                  <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
+                    <span>Q4:主辦單位可否修改活動內容或獎項?</span>
+                    <span class="expand-icon" aria-hidden="true">▼</span>
+                  </summary>
+                  <div class="faq-content">
+                    <p>主辦單位將保留修正、停止及更換等值獎品的權利，活動相關修正訊息以本活動網站公告內容為準，恕不另行個別通知，且若因故活動無法進行時，主辦單位有權決定取消、終止或暫停此活動。</p>
+                  </div>
+                </details>
+
+                <details class="faq-item" id="faq-q5">
+                  <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
+                    <span>Q5:若活動有未盡事宜，如何處理?</span>
+                    <span class="expand-icon" aria-hidden="true">▼</span>
+                  </summary>
+                  <div class="faq-content">
+                    <p>本注意事項若有未盡事宜，主辦單位保留補充修改之權利，若有任何更動，皆以本活動網站公告為準，不另行通知。</p>
+                  </div>
+                </details>
+
+                <details class="faq-item" id="faq-q6">
+                  <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
+                    <span>Q6:活動網頁內容是否可以複製使用?</span>
+                    <span class="expand-icon" aria-hidden="true">▼</span>
+                  </summary>
+                  <div class="faq-content">
+                    <p>本活動網頁之所有內容由主辦單位擁有所有版權，未經許可，不可抄襲、拷貝與複製相關圖片與文字，否則將提起相關訴訟。</p>
+                  </div>
+                </details>
+
+                <details class="faq-item" id="faq-q7">
+                  <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
+                    <span>Q7:若活動相關爭議需進入法律程序，哪裡是管轄法院?</span>
+                    <span class="expand-icon" aria-hidden="true">▼</span>
+                  </summary>
+                  <div class="faq-content">
+                    <p>本活動未盡事宜，係依中華民國相關法令補充之，如因本活動涉訟，係依台灣台北地方法院為第一審管轄法院。</p>
+                  </div>
+                </details>
+
+                <!-- 二、參加資格與行為規範 -->
+                <h3 class="text-lg font-medium text-gray-700 mb-4 mt-6">👤 參加資格與行為規範</h3>
+
+                <details class="faq-item" id="faq-q8">
+                  <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
+                    <span>Q8:誰可以參加本活動?</span>
+                    <span class="expand-icon" aria-hidden="true">▼</span>
+                  </summary>
+                  <div class="faq-content">
+                    <p>本活動參加者須年滿13歲。若您同意未成年子女參加本活動，您需陪伴輔導未成年子女閱讀、瞭解抽獎活動辦法及注意事項、抽獎活動個資告知事項等相關規定，您及未成年子女並同意接受本活動相關規定內容及其後修改變更。</p>
+                  </div>
+                </details>
+
+                <details class="faq-item" id="faq-q9">
+                  <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
+                    <span>Q9:若參加者使用不當方式參與活動會如何?</span>
+                    <span class="expand-icon" aria-hidden="true">▼</span>
+                  </summary>
+                  <div class="faq-content">
+                    <p>參加者若以惡意之電腦程式或其他明顯違反活動之正常運行之方式，意圖混淆或影響活動結果者，一經主辦單位察覺得立即取消參加者之參賽、抽獎及得獎資格，並得追回獎品。參加者對於因違反相關規定所產生之一切法律責任，需自行負擔。</p>
+                  </div>
+                </details>
+
+                <details class="faq-item" id="faq-q10">
+                  <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
+                    <span>Q10:若違反注意事項會有什麼後果?</span>
+                    <span class="expand-icon" aria-hidden="true">▼</span>
+                  </summary>
+                  <div class="faq-content">
+                    <p>參加者如有違反本注意事項，即視同不具參加資格;中獎者如有違反本注意事項，則將取消其得獎資格不予給獎，如已給獎者，則應將獎項返還，該違反之中獎者並應就主辦單位因此所受之損害(包括但不限於侵權損害賠償、商譽損失、訴訟費用、律師費用)負完全之賠償責任。</p>
+                  </div>
+                </details>
+
+                <details class="faq-item" id="faq-q11">
+                  <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
+                    <span>Q11:若中獎者冒用他人身分或違規，主辦單位可以怎麼處理?</span>
+                    <span class="expand-icon" aria-hidden="true">▼</span>
+                  </summary>
+                  <div class="faq-content">
+                    <p>中獎者如有冒用他人身分、不符合或違反本活動規定事項者，主辦單位保有取消其中獎資格的權利。主辦單位無需負任何責任;倘因此造成主辦單位或任何第三人損害，主辦單位得提起相關訴訟。</p>
+                  </div>
+                </details>
+
+                <!-- 三、獎項、寄送與兌換相關 -->
+                <h3 class="text-lg font-medium text-gray-700 mb-4 mt-6">🎁 獎項、寄送與兌換相關</h3>
+
+                <details class="faq-item" id="faq-q12">
+                  <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
+                    <span>Q12:獎品可以要求更換或折現嗎?</span>
+                    <span class="expand-icon" aria-hidden="true">▼</span>
+                  </summary>
+                  <div class="faq-content">
+                    <p>本活動獎品不得要求轉換、轉讓或折換現金。</p>
+                  </div>
+                </details>
+
+                <details class="faq-item" id="faq-q13">
+                  <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
+                    <span>Q13:若獎品缺貨或無法提供，會如何處理?</span>
+                    <span class="expand-icon" aria-hidden="true">▼</span>
+                  </summary>
+                  <div class="faq-content">
+                    <p>本活動獎品悉以實物為準，恕無法挑選，如遇缺貨或不可抗力之因素無法提供時，主辦單位有權以其他等值商品替代。</p>
+                  </div>
+                </details>
+
+                <details class="faq-item" id="faq-q14">
+                  <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
+                    <span>Q14:獎品寄送是否有地區限制?</span>
+                    <span class="expand-icon" aria-hidden="true">▼</span>
+                  </summary>
+                  <div class="faq-content">
+                    <p>活動獎品寄送地址僅限中華民國境內，如中獎者未能於領獎期限前回覆有效國內寄送地址，主辦單位得取消其中獎資格。恕不處理郵寄獎項至海外地區之事宜。</p>
+                  </div>
+                </details>
+
+                <details class="faq-item" id="faq-q15">
+                  <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
+                    <span>Q15:獎品寄送時間是什麼時候?</span>
+                    <span class="expand-icon" aria-hidden="true">▼</span>
+                  </summary>
+                  <div class="faq-content">
+                    <p>主辦單位依兌換者所提供之地址寄送獎項，本活動獎項贈品將統一於115年4月15日前寄出。如因個人因素導致寄送二次均無法順利送交，得獎者將被視為自動放棄兌獎權益，主辦單位將不再另行配送。</p>
+                  </div>
+                </details>
+
+                <details class="faq-item" id="faq-q16">
+                  <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
+                    <span>Q16:若對獎項有疑問，該如何聯絡?</span>
+                    <span class="expand-icon" aria-hidden="true">▼</span>
+                  </summary>
+                  <div class="faq-content">
+                    <p> 未收到獎項、對收到的獎項品質或內容有疑慮者，請於115年4月22日前來電本公司活動專線:02-27392029 分機1016，服務時間:週一至週五09:00~17:00(國定例假日恕不提供接聽服務)。逾期視同放棄獎項兌換權利或獎項收件無誤。</p>
+                  </div>
+                </details>
+
+                <!-- 四、稅務與資料填寫 -->
+                <h3 class="text-lg font-medium text-gray-700 mb-4 mt-6">💰 稅務與資料填寫</h3>
+
+                <details class="faq-item" id="faq-q17">
+                  <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
+                    <span>Q17:中獎者需要繳稅嗎?</span>
+                    <span class="expand-icon" aria-hidden="true">▼</span>
+                  </summary>
+                  <div class="faq-content">
+                    <p>依中華民國稅法規定，若中獎者為本國人，獎項價值超過新台幣1,000元(含)，需依規定填寫並繳交身分證影本供報稅使用，並將以新台幣計價列入年度之個人綜合所得稅申報。若獎項價值超過新台幣20,000元(含)，中獎者依法需預繳10%稅金，待中獎者付清稅金後方可領獎。依中華民國稅法規定，中獎者若非中華民國國境內設籍之國人(即依法於課稅年度內，在中華民國境內居住未達183天之本國人含大陸人士及外國人)，不論中獎者所得獎項之價值，需預先扣繳20%機會中獎稅金，待中獎者付清稅金後方可領獎。如依其他法令規定另須代扣繳其他稅費者，亦於扣除相關金額後，始為實際發放金額。若未能依法繳納應繳稅額，即視為喪失中獎資格。參加本活動者參加本活動而須支付任何稅捐皆為參加本活動者之義務，概與主辦單位無關。前述稅捐法規如有更新或變動者，依修正後之規定辦理。</p>
+                  </div>
+                </details>
+
+                <details class="faq-item" id="faq-q18">
+                  <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
+                    <span>Q18:中獎者填寫領獎資料有哪些注意事項?</span>
+                    <span class="expand-icon" aria-hidden="true">▼</span>
+                  </summary>
+                  <div class="faq-content">
+                    <p>填寫領獎所需資料，如:資料錯誤或不全等，視同放棄中獎資格。相關個人資訊由主辦單位於活動範圍內進行蒐集、電腦處理及利用於此次活動用途，但不做其他用途並授權主辦單位在必要時公開公佈部分姓名或個人資料。</p>
+                  </div>
+                </details>
+
+                <!-- 五、未成年人與個資保護 -->
+                <h3 class="text-lg font-medium text-gray-700 mb-4 mt-6">🧒 未成年人與個資保護</h3>
+
+                <details class="faq-item" id="faq-q19">
+                  <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
+                    <span>Q19:中獎者若為未成年人，如何領獎?</span>
+                    <span class="expand-icon" aria-hidden="true">▼</span>
+                  </summary>
+                  <div class="faq-content">
+                    <p>中獎者若為未成年人，須獲得法定代理人(或監護人)同意及代為領取，且應檢附身分證正反面影本(無國民身分證者，須提供戶籍謄本影本(須為3個月內核發之版本)與另附法定代理人(或監護人)之身分證正反面影本，及提出法定代理人(或監護人)同意之證明文件(需簽名或蓋印)。</p>
+                  </div>
+                </details>
+
+                <details class="faq-item" id="faq-q20">
+                  <summary class="faq-summary" role="button" aria-expanded="false" tabindex="0">
+                    <span>Q20:主辦單位如何保護個人資料?</span>
+                    <span class="expand-icon" aria-hidden="true">▼</span>
+                  </summary>
+                  <div class="faq-content">
+                    <p>主辦單位僅使用參加者所提供之個人資料於此次活動用途，且遵守【個人資料保護法】相關規定，以維護參加者權益。得獎者於<a href="https://cathayhcm.surveycake.biz/s/DVLdY" target="_blank" rel="noopener noreferrer" class="text-primary underline hover:text-primary/80 transition-colors">https://cathayhcm.surveycake.biz/s/KeXYy</a> 填寫相關資料並同意主辦單位依下列「個資告知事項」內容進行蒐集與利用，詳見<a href="https://www.cathay-hcm.com.tw/tw/page/privacy" target="_blank" rel="noopener noreferrer" class="text-primary underline hover:text-primary/80 transition-colors">https://www.cathay-hcm.com.tw/tw/page/privacy</a>。</p>
+                  </div>
+                </details>
+
+              </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- 頁面底部版權聲明 -->
+  <footer style="text-align:center; font-size:0.9em; color:#777; padding:20px 0;">
+    Copyright © 2025 Cathay Healthcare Management Co., Ltd. All rights reserved.
+  </footer>
+
+  <script>
+    // 抽獎結果顯示邏輯
+    function checkAnnouncementDate() {
+      const previewElement = document.getElementById('announcement-preview');
+
+      // 確保預告狀態始終顯示
+      if (previewElement) {
+        previewElement.classList.remove('hidden');
+      }
+    }
+
+    // 頁面載入時檢查
+    document.addEventListener('DOMContentLoaded', checkAnnouncementDate);
+  </script>
+</body>
+</html>
