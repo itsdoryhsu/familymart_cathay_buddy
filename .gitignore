@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+
+# Claude Code 本地設定
+.claude/
+claude.md
+CLAUDE.md
+
+# 本地備份
+*.bak
+*.bak-*
+index.html.bak-*
+
+# 打包輸出（給客戶的 ZIP，不入 repo）
+*.zip
+全家問Buddy/
+
+# 設計稿源檔（非程式碼）
+*.pdf
+*.pptx
+
+# Node（之後若用到）
+node_modules/
