@@ -245,6 +245,27 @@ a[role="button"] {
   color: var(--color-primary);
 }
 
+/* 獎品卡片 Badge 與強調邊框 */
+.prize-badge {
+  display: inline-block;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  padding: 5px 20px 5px 22px; /* 右 padding 略減以抵消字距造成的右側空白 */
+  border-radius: 9999px;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+.prize-badge-primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+.prize-badge-outline {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
 .line-cta {
   display: inline-flex;
   align-items: center;
@@ -416,42 +437,51 @@ a[role="button"] {
       <!-- 獎品展示區塊 -->
       <section class="mb-16" aria-labelledby="prizes-section">
         <div class="max-w-3xl lg:max-w-5xl mx-auto">
-          <h2 id="prizes-section" class="text-3xl font-bold text-center mb-8 text-dark">完成任務贈健康三好禮</h2>
+          <h2 id="prizes-section" class="text-3xl font-bold text-center mb-8 text-dark">完成「問 Buddy」任務，再贈 2 好禮</h2>
 
           <div class="bg-gray-200/40 rounded-lg p-6 sm:p-8" role="region" aria-label="獎品展示">
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <!-- 健康三餐 -->
-              <article class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow overflow-hidden flex flex-col items-center"
-                       aria-labelledby="prize-meal">
-                <div class="w-full h-48 bg-cover-center prize-img bg-gray-100"
-                     style="background-image: url('assets/gift1.png')"
-                     role="img" aria-label="健康三餐推薦"></div>
-                <div class="p-6 w-full text-center">
-                  <p id="prize-meal" class="text-base font-bold text-primary">健康三餐 | 全家推薦餐點</p>
-                </div>
-              </article>
+              <div class="flex flex-col items-center">
+                <span class="prize-badge prize-badge-outline">完成任務</span>
+                <article class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow overflow-hidden flex flex-col items-center w-full"
+                         aria-labelledby="prize-meal">
+                  <div class="w-full h-48 bg-cover-center prize-img bg-gray-100"
+                       style="background-image: url('assets/gift1.png')"
+                       role="img" aria-label="健康三餐推薦"></div>
+                  <div class="p-6 w-full text-center">
+                    <p id="prize-meal" class="text-base font-bold text-primary">Buddy告訴你 如何健康吃全家</p>
+                  </div>
+                </article>
+              </div>
 
               <!-- LINE Point -->
-              <article class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow overflow-hidden flex flex-col items-center"
-                       aria-labelledby="prize-points">
-                <div class="w-full h-48 bg-cover-center prize-img bg-gray-100"
-                     style="background-image: url('assets/gift2.png')"
-                     role="img" aria-label="LINE Point 10 點"></div>
-                <div class="p-6 w-full text-center">
-                  <p id="prize-points" class="text-base font-bold text-primary">LINE Points 10 點</p>
-                </div>
-              </article>
+              <div class="flex flex-col items-center">
+                <span class="prize-badge prize-badge-primary">加碼好禮</span>
+                <article class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow overflow-hidden flex flex-col items-center w-full"
+                         aria-labelledby="prize-points">
+                  <div class="w-full h-48 bg-cover-center prize-img bg-gray-100"
+                       style="background-image: url('assets/gift2.png')"
+                       role="img" aria-label="LINE Point 10 點"></div>
+                  <div class="p-6 w-full text-center">
+                    <p id="prize-points" class="text-base font-bold text-primary">LINE Points 10 點</p>
+                  </div>
+                </article>
+              </div>
 
               <!-- 益生菌優惠券 -->
-              <article class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow overflow-hidden flex flex-col items-center"
-                       aria-labelledby="prize-probiotic">
-                <div class="w-full h-48 bg-cover-center prize-img bg-gray-100"
-                     style="background-image: url('assets/gift3.png')"
-                     role="img" aria-label="每日衡好益生菌優惠券"></div>
-                <div class="p-6 w-full text-center">
-                  <p id="prize-probiotic" class="text-base font-bold text-primary">每日衡好益生菌優惠券</p>
-                </div>
-              </article>
+              <div class="flex flex-col items-center">
+                <span class="prize-badge prize-badge-primary">加碼好禮</span>
+                <article class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow overflow-hidden flex flex-col items-center w-full"
+                         aria-labelledby="prize-probiotic">
+                  <div class="w-full h-48 bg-cover-center prize-img bg-gray-100"
+                       style="background-image: url('assets/gift3.png')"
+                       role="img" aria-label="每日衡好益生菌優惠券"></div>
+                  <div class="p-6 w-full text-center">
+                    <p id="prize-probiotic" class="text-base font-bold text-primary">每日衡好益生菌優惠券</p>
+                  </div>
+                </article>
+              </div>
             </div>
           </div>
         </div>
