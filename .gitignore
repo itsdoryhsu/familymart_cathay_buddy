@@ -6,10 +6,11 @@
 claude.md
 CLAUDE.md
 
-# 本地備份
+# 本地備份與工作中暫存檔
 *.bak
 *.bak-*
 index.html.bak-*
+*_tmp.*
 
 # 打包輸出（給客戶的 ZIP，不入 repo）
 *.zip
